@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  background: linear-gradient(
+    to left,
+    #e60c7d,
+    #e60c7c,
+    #f28c00,
+    #674186,
+    #4f368c,
+    #4f368c,
+    #0f75bb,
+    #035c98
+  );
+  padding: 5px 5px 0 5px;
+}
+li {
+  list-style: none;
+}
+body {
+  background-color: black;
+  color: white;
+  font-family: Montserrat, Georgia, "Times New Roman", Times, serif;
+  height: 140vh;
+  background-image: url("./images/forma-geometrica.png");
+  background-repeat: no-repeat;
+  background-size: 65%;
+  background-position-x: 80%;
+  background-position-y: 40px;
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.header-grid {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+}
+header {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-column: 2 / 3;
+}
+main {
+  max-width: 80%;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
+.brand {
+  display: flex;
+  width: 160px;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+}
+.mid {
+  display: block;
+  width: 9px;
+  height: 66px;
+  background-color: white;
+  margin: 0 15px;
+}
+.left {
+  display: block;
+  width: 9px;
+  height: 25px;
+  background-color: white;
+  margin-top: 12px;
+}
+.right {
+  display: block;
+  width: 9px;
+  height: 25px;
+  background-color: white;
+  margin-top: 12px;
+}
+.text {
+  margin: 9px auto;
+  color: white;
+}
+.text h2 {
+  font-weight: 500;
+}
+.text h4 {
+  font-weight: 300;
+  text-align: right;
+  font-style: italic;
+}
+.menu-open {
+  position: fixed;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left: 93.5%;
+  top: 50px;
+}
+.top {
+  display: block;
+  background-color: white;
+  width: 20px;
+  height: 7px;
+  margin-bottom: 7px;
+  margin-left: 20px;
+}
+.bottom {
+  display: block;
+  background-color: white;
+  width: 40px;
+  height: 7px;
+}
+[data-menu="container"] {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 50;
+  display: none;
+  top: 0;
+}
+[data-menu="container"].ativo {
+  display: flex;
+  justify-content: flex-end;
+}
+.menu {
+  background-color: white;
+  position: fixed;
+  color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 120px 1fr;
+  height: 85vh;
+  width: 400px;
+  cursor: default;
+  animation: show 0.5s forwards;
+  right: 0;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(50px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.logo-menu {
+  display: flex;
+  margin-top: 27px;
+  margin-left: 35px;
+  grid-column: 1 / 2;
+}
+.logo-menu > * {
+  background-color: black;
+}
+.menu-close {
+  text-transform: uppercase;
+  font-size: 1.75rem;
+  font-weight: bold;
+  grid-column: 2/3;
+  width: 50px;
+  height: 50px;
+  margin-top: 26px;
+  margin-left: 125px;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.social {
+  display: flex;
+  flex-direction: column;
+  margin-left: 35px;
+}
+.social p {
+  color: #777;
+  font-style: italic;
+  font-size: 1.125rem;
+  font-weight: 300;
+  margin-top: 30px;
+}
+.social li {
+  margin-bottom: 50px;
+}
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  margin-left: 35px;
+}
+.menu-links p {
+  color: #777;
+  font-style: italic;
+  font-size: 1.125rem;
+  font-weight: 300;
+  margin-top: 30px;
+}
+.menu-links li {
+  margin-bottom: 50px;
+}
+.menu-links a {
+  color: black;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.contato-email {
+  grid-column: 1 / 2;
+  margin-left: 25px;
+  margin-bottom: 20px;
+}
+.ctt-wpp {
+  grid-column: 2 / 3;
+  margin-left: 35px;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 85vh;
+}
+.hero h1 {
+  font-size: 4.125rem;
+}
+.hero span {
+  font-style: italic;
+}
+.hero .img-container {
+  max-width: 40%;
+  background: transparent;
+  padding: 10px;
+  border: 5px solid #e60c7c;
+  box-shadow: 2px 3px 10px rgba(0, 0, 255, 0.527);
+}
+.projetos h1 {
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: lighter;
+}
+.projetos span {
+  font-weight: bold;
+  font-style: italic;
+}
