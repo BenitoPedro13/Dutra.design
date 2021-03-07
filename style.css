@@ -25,16 +25,15 @@ body {
   background-color: black;
   color: white;
   font-family: Montserrat, Georgia, "Times New Roman", Times, serif;
-  height: 140vh;
   background-image: url("./images/forma-geometrica.png");
   background-repeat: no-repeat;
-  background-size: 65%;
-  background-position-x: 80%;
+  background-size: 50rem;
+  background-position-x: 90%;
   background-position-y: 40px;
-  overflow-x: hidden;
 }
 img {
   max-width: 100%;
+  object-fit: cover;
   display: block;
 }
 .header-grid {
@@ -48,10 +47,6 @@ header {
   justify-content: space-between;
   align-items: center;
   grid-column: 2 / 3;
-}
-main {
-  max-width: 80%;
-  margin: 0 auto;
 }
 a {
   text-decoration: none;
@@ -107,9 +102,12 @@ a {
   left: 93.5%;
   top: 50px;
 }
+.menu-open.ativo {
+  display: none;
+}
 .top {
   display: block;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   width: 20px;
   height: 7px;
   margin-bottom: 7px;
@@ -117,7 +115,7 @@ a {
 }
 .bottom {
   display: block;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   width: 40px;
   height: 7px;
 }
@@ -135,27 +133,25 @@ a {
   justify-content: flex-end;
 }
 .menu {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   position: fixed;
   color: black;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 120px 1fr;
-  height: 85vh;
-  width: 400px;
+  height: 100vh;
+  width: 50%;
   cursor: default;
-  animation: show 0.5s forwards;
+  animation: show 1.5s forwards;
   right: 0;
 }
 
 @keyframes show {
   from {
     opacity: 0;
-    transform: translate3d(50px, 0, 0);
   }
   to {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
   }
 }
 .logo-menu {
@@ -175,11 +171,12 @@ a {
   width: 50px;
   height: 50px;
   margin-top: 26px;
-  margin-left: 125px;
   cursor: pointer;
-  padding: 10px;
   display: flex;
+  align-items: center;
   justify-content: center;
+  justify-self: right;
+  margin-right: 25px;
 }
 .social {
   display: flex;
@@ -188,7 +185,7 @@ a {
 }
 .social p {
   color: #777;
-  font-style: italic;
+
   font-size: 1.125rem;
   font-weight: 300;
   margin-top: 30px;
@@ -203,7 +200,7 @@ a {
 }
 .menu-links p {
   color: #777;
-  font-style: italic;
+
   font-size: 1.125rem;
   font-weight: 300;
   margin-top: 30px;
@@ -214,7 +211,7 @@ a {
 .menu-links a {
   color: black;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 .contato-email {
   grid-column: 1 / 2;
@@ -226,6 +223,8 @@ a {
   margin-left: 35px;
 }
 .hero {
+  max-width: 80%;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -238,18 +237,93 @@ a {
   font-style: italic;
 }
 .hero .img-container {
-  max-width: 40%;
+  width: 20rem;
+  height: 20rem;
   background: transparent;
   padding: 10px;
   border: 5px solid #e60c7c;
   box-shadow: 2px 3px 10px rgba(0, 0, 255, 0.527);
 }
-.projetos h1 {
+.hero .img-container img {
+  height: 18rem;
+}
+.projetos {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.projetos-titulo h1 {
   text-align: center;
   font-size: 4.5rem;
   font-weight: lighter;
 }
-.projetos span {
+.projetos-titulo span {
   font-weight: bold;
   font-style: italic;
+}
+.projeto-container[data-projeto="Tanoshime"] {
+  background-image: url("./images/forma-2.png");
+  background-repeat: no-repeat;
+  background-size: 35rem;
+  background-position-x: 87%;
+  background-position-y: center;
+}
+.projeto-container[data-projeto="Ilma"] {
+  background-image: url("./images/forma-4.png");
+  background-repeat: no-repeat;
+  background-size: 40rem;
+  background-position-x: 5%;
+  background-position-y: center;
+}
+.projeto-container[data-projeto="Sus"] {
+  background-image: url("./images/forma-1.png");
+  background-repeat: no-repeat;
+  background-size: 40rem;
+  background-position-x: 95%;
+  background-position-y: center;
+}
+.projeto-container[data-projeto="Pizza"] {
+  background-image: url("./images/forma-geometrica.png");
+  background-repeat: no-repeat;
+  background-size: 45rem;
+  background-position-x: 5%;
+  background-position-y: center;
+}
+.projeto {
+  display: flex;
+  max-width: 80%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  height: 130vh;
+}
+.projeto-container[data-projeto="Ilma"] .projeto {
+  flex-direction: row-reverse;
+}
+.projeto-container[data-projeto="Pizza"] .projeto {
+  flex-direction: row-reverse;
+}
+.projeto-descricao h4 {
+  margin-bottom: 2rem;
+  font-weight: normal;
+  font-size: 1.25rem;
+}
+.projeto-descricao h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: normal;
+}
+.projeto-descricao p {
+  font-size: 1.25rem;
+  color: #777;
+}
+.projeto .img-container {
+  width: 28rem;
+  height: 40rem;
+  background: transparent;
+  padding: 10px;
+  border: 5px solid #e60c7c;
+  box-shadow: 2px 3px 10px rgba(0, 0, 255, 0.527);
+}
+.projeto .img-container img {
+  height: 38rem;
 }
