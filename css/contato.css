@@ -213,19 +213,24 @@ header h1 {
 }
 .contato {
   width: 80%;
-  height: 80vh;
+  height: 115vh;
+  margin-top: 0rem;
   margin: 0 auto;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  margin-top: 3rem;
-}
-.contato > * {
-  margin-left: 4rem;
 }
 .contato .contato-text h1 {
   font-size: 3.5rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
+  text-align: center;
+}
+#contato-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 form {
   margin-top: 3rem;
@@ -235,12 +240,25 @@ form {
   background: transparent;
   border: none;
   outline: none;
-  border-bottom: 1px solid #777;
+  border-bottom: 3px solid rgba(119, 119, 119, 0.3);
   color: #bbb;
   font-size: 1.5rem;
   font-weight: 500;
   font-family: Montserrat, Georgia, "Times New Roman", Times, serif;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  line-height: 3rem;
+}
+form button {
+  width: fit-content;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid rgba(119, 119, 119, 0.3);
+  color: #777;
+  line-height: 4rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: rem;
 }
 footer {
   background-color: black;

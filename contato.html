@@ -37,14 +37,15 @@
         <h1>Oi! Conte-nos<br>tudo o que quiser 😁</h1>
       </div>
       <div class="contato-form">
-        <form action="" id="contato-form" method="POST">
-          <input type="text" name="email" class="contato-input" placeholder="Seu nome" required>
+        <form action="contactform.php" id="contato-form" method="POST">
+          <input type="text" name="name" class="contato-input" placeholder="Seu nome" required>
           <br>
-          <input name="email" type="email" class="contato-input" id="contato-form" placeholder="Seu email" required>
+          <input name="email" type="text" class="contato-input" id="contato-form" placeholder="Seu e-mail" required>
           <br>
-          <textarea name="mensagem" class="contato-input" id="contato-form" cols="30" rows="4" placeholder="Fale mais sobre o seu projeto"></textarea>
+          <input name="assunto" type="text" class="contato-input" id="contato-form" placeholder="Assunto" required>
+          <textarea name="mensagem" class="contato-input" id="contato-form" placeholder="Fale mais sobre o seu projeto"></textarea>
           <br>
-          <input type="submit" class="contato-form submit" value="Entrar em contato">
+          <button type="submit" name="enviar">👉 Entre em contato 👈</button>
         </form>
       </div>
     </section>
@@ -69,7 +70,7 @@
         <ul class="menu-links">
           <li><p>menu</p></li>
           <li><a href="#">portifólio</a></li>
-          <li><a href="./sobre.html">contato</a></li>
+          <li><a href="#">contato</a></li>
           <li><a href="./sobre.html">sobre</a></li>
         </ul>
   
