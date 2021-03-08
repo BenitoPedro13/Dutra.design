@@ -211,35 +211,36 @@ header h1 {
   grid-column: 2 / 3;
   margin-left: 35px;
 }
-.sobre {
+.contato {
   width: 80%;
   height: 80vh;
   margin: 0 auto;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  flex-direction: column;
+  margin-top: 3rem;
 }
-.sobre .sobre-text h1 {
+.contato > * {
+  margin-left: 4rem;
+}
+.contato .contato-text h1 {
   font-size: 3.5rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
-.sobre .sobre-text h3 {
-  font-size: 1.75rem;
+form {
+  margin-top: 3rem;
+}
+.contato-input {
+  width: 40rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #777;
+  color: #bbb;
+  font-size: 1.5rem;
   font-weight: 500;
-  margin-bottom: 2.5rem;
-}
-.sobre .sobre-text p {
-  margin-bottom: 1.5rem;
-  color: #777;
-}
-.sobre .sobre-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.sobre .sobre-img img {
-  max-height: 28rem;
+  font-family: Montserrat, Georgia, "Times New Roman", Times, serif;
+  margin-bottom: 3rem;
 }
 footer {
   background-color: black;
