@@ -1,19 +1,7 @@
-const botaoAbrir = document.querySelector('[data-menu="open"]');
-const botaoFechar = document.querySelector('[data-menu="close"]');
-const containerMenu = document.querySelector('[data-menu="container"]');
+import initAnimar from './anime.js';
+import SlideNav from './slide.js';
 
-if (botaoAbrir && botaoFechar && containerMenu) {
-  function toggleMenu(event) {
-    containerMenu.classList.toggle("ativo");
-    botaoAbrir.classList.toggle("ativo");
-
-  }
-
-  function cliqueForaMenu(event) {
-    event.target === this ? toggleMenu(event) : null;
-  }
-
-  botaoAbrir.addEventListener("click", toggleMenu);
-  botaoFechar.addEventListener("click", toggleMenu);
-  containerMenu.addEventListener("click", cliqueForaMenu);
-}
+const slide = new SlideNav('.slide', '.wrapper');
+slide.init();
+slide.addControl('.custom-controls');
+initAnimar();
