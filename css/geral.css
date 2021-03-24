@@ -25,11 +25,6 @@ body {
   background-color: black;
   color: white;
   font-family: Montserrat, Georgia, "Times New Roman", Times, serif;
-  background-image: url("../images/forma-geometrica.png");
-  background-repeat: no-repeat;
-  background-size: 50rem;
-  background-position-x: 90%;
-  background-position-y: 40px;
   overflow-x: hidden;
 }
 img {
@@ -59,6 +54,24 @@ a {
 }
 .logo {
   display: flex;
+  justify-content: center;
+  width: 57px;
+}
+.brand .logo > * {
+  display: none;
+}
+.brand .logo .mid.ativo {
+  display: block;
+  margin: 0;
+  animation: mid 1s forwards;
+}
+.brand .logo .left.ativo {
+  display: block;
+  animation: left 0.5s forwards;
+}
+.brand .logo .right.ativo {
+  display: block;
+  animation: right 0.5s forwards;
 }
 .mid {
   display: block;
@@ -66,6 +79,7 @@ a {
   height: 66px;
   background-color: white;
   margin: 0 15px;
+  left: 50%;
 }
 .left {
   display: block;
@@ -81,6 +95,34 @@ a {
   background-color: white;
   margin-top: 12px;
 }
+
+@keyframes mid {
+  from {
+    height: 0;
+    margin: 0;
+  }
+  to {
+    height: 66px;
+    margin: 0;
+  }
+}
+@keyframes left {
+  from {
+    transform: translate3d(9px, 0, 0);
+  }
+  to {
+    transform: translate3d(-15px, 0, 0);
+  }
+}
+@keyframes right {
+  from {
+    transform: translate3d(-9px, 0, 0);
+  }
+  to {
+    transform: translate3d(15px, 0, 0);
+  }
+}
+
 .text {
   margin: 9px auto;
   color: white;
@@ -93,14 +135,19 @@ a {
   text-align: right;
   font-style: italic;
 }
+.menu-txt {
+  font-style: italic;
+  left: 0;
+}
 .menu-open {
   position: fixed;
   cursor: pointer;
+  z-index: 13;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  left: 93.5%;
+  right: 3%;
   top: 50px;
 }
 .menu-open.ativo {
@@ -143,7 +190,7 @@ a {
   height: 100vh;
   width: 50%;
   cursor: default;
-  animation: show 1.5s forwards;
+  animation: show 1s forwards;
   right: 0;
 }
 
@@ -155,13 +202,13 @@ a {
     opacity: 1;
   }
 }
-.logo-menu {
+.logo-menu a {
   display: flex;
   margin-top: 27px;
   margin-left: 35px;
   grid-column: 1 / 2;
 }
-.logo-menu > * {
+.logo-menu a > * {
   background-color: black;
 }
 .menu-close {
@@ -200,7 +247,6 @@ a {
 }
 .menu-links p {
   color: #777;
-
   font-size: 1.125rem;
   font-weight: 300;
   margin-top: 30px;
@@ -227,26 +273,109 @@ a {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   height: 85vh;
 }
-.hero h1 {
-  font-size: 4.125rem;
+.hero .title {
+  font-size: 3rem;
+  z-index: 2;
+  position: absolute;
+  left: 10%;
 }
-.hero span {
+
+.hero .certo {
   font-style: italic;
 }
 .hero .img-container {
-  width: 20rem;
-  height: 20rem;
+  width: 28rem;
+  height: 18.5rem;
   background: transparent;
-  padding: 10px;
-  border: 5px solid #e60c7c;
-  box-shadow: 2px 3px 10px rgba(0, 0, 255, 0.527);
+  z-index: 1;
+  position: absolute;
+  right: 10%;
+  overflow: hidden;
+  border-radius: 13px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.4);
 }
+
+.slide {
+  display: flex;
+}
+
+.slide li {
+  flex-shrink: 0;
+  opacity: 0.8;
+  scale: 0.8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transform: scale(0.9);
+  transition: 0.4s;
+}
+
+.slide li.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
 .hero .img-container img {
-  height: 18rem;
+  height: 18.5rem;
+  z-index: 2;
 }
+
+.custom-controls {
+  z-index: 1;
+  visibility: hidden;
+  right: 10%;
+  position: absolute;
+  width: 28rem;
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 20px 0;
+  flex-wrap: wrap;
+}
+
+.custom-controls.active {
+  visibility: visible;
+}
+
+.custom-controls li img {
+  object-fit: scale-down;
+}
+
+.custom-controls li {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 2px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.custom-controls li.active {
+  margin: 40px 6px 0px 6px;
+}
+
+.hero .bg {
+  width: 40rem;
+  display: none;
+  position: absolute;
+  right: 5vw;
+  z-index: 0;
+}
+
+.hero .bg svg {
+  position: relative;
+  overflow: visible;
+  right: -0rem;
+  top: -0rem;
+}
+
+.hero .bg path {
+  position: relative;
+  right: -0rem;
+  top: -0rem;
+  fill: rgba(0, 0, 0, 0.2);
+}
+
 .projetos {
   max-width: 100%;
   margin: 0 auto;
@@ -255,6 +384,9 @@ a {
   text-align: center;
   font-size: 4.5rem;
   font-weight: lighter;
+  position: relative;
+  z-index: 1;
+  margin: 20vh 0 30vh 0;
 }
 .projetos-titulo span {
   font-weight: bold;
@@ -394,6 +526,78 @@ a {
   background-color: white;
   margin-left: 41px;
 }
+.how {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.how-titulo h1 {
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: lighter;
+}
+.how-titulo span {
+  font-weight: bold;
+  font-style: italic;
+}
+.how-container {
+  margin-top: 5.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 150vh;
+  background-image: url("../images/forma-geometrica-espelhada.png");
+  background-size: 50rem;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 7rem;
+}
+.how-btn {
+  height: fit-content;
+}
+.how-container .how-btn {
+  display: flex;
+  background-color: black;
+  width: 3.25rem;
+  height: 3.25rem;
+  border: 3px solid white;
+  border-radius: 50%;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.how-container h2 {
+  font-size: 3.5rem;
+  font-weight: normal;
+  margin-bottom: 13rem;
+}
+.icon-pesquisa {
+  display: flex;
+}
+.icon-pesquisa .left {
+  width: 25px;
+  height: 80px;
+  margin-top: 0;
+}
+.icon-pesquisa .mid {
+  width: 25px;
+  height: 200px;
+  margin: 0 45px;
+}
+.icon-pesquisa .right {
+  width: 25px;
+  height: 80px;
+  margin-top: 0;
+}
+.how-text h3 {
+  margin-top: 50px;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.how-text p {
+  text-align: center;
+  font-size: 1.25rem;
+}
 footer {
   background-color: white;
   position: absolute;
@@ -416,10 +620,10 @@ footer .text-logo {
   justify-content: space-between;
   align-items: center;
 }
-footer .text-logo .logo-footer {
+footer .text-logo .logo-footer a {
   display: flex;
 }
-footer .text-logo .logo-footer > * {
+footer .text-logo .logo-footer a > * {
   background-color: black;
 }
 footer .ctt {

@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  background: linear-gradient(
+    to left,
+    #e60c7d,
+    #e60c7c,
+    #f28c00,
+    #674186,
+    #4f368c,
+    #4f368c,
+    #0f75bb,
+    #035c98
+  );
+  padding: 5px 5px 0 5px;
+}
+li {
+  list-style: none;
+}
+body {
+  background-color: black;
+  color: white;
+  font-family: Montserrat, Georgia, "Times New Roman", Times, serif;
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+}
+.header-grid {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+}
+header {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-column: 2 / 3;
+}
+header h1 {
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+a {
+  text-decoration: none;
+}
+.brand {
+  display: flex;
+  width: fit-content;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  width: 57px;
+}
+.brand .logo > * {
+  display: none;
+}
+.brand .logo .mid.ativo {
+  display: block;
+  margin: 0;
+  animation: mid 1s forwards;
+}
+.brand .logo .left.ativo {
+  display: block;
+  animation: left 0.5s forwards;
+}
+.brand .logo .right.ativo {
+  display: block;
+  animation: right 0.5s forwards;
+}
+.mid {
+  display: block;
+  width: 9px;
+  height: 66px;
+  background-color: white;
+  margin: 0 15px;
+  left: 50%;
+}
+.left {
+  display: block;
+  width: 9px;
+  height: 25px;
+  background-color: white;
+  margin-top: 12px;
+}
+.right {
+  display: block;
+  width: 9px;
+  height: 25px;
+  background-color: white;
+  margin-top: 12px;
+}
+
+@keyframes mid {
+  from {
+    height: 0;
+    margin: 0;
+  }
+  to {
+    height: 66px;
+    margin: 0;
+  }
+}
+@keyframes left {
+  from {
+    transform: translate3d(9px, 0, 0);
+  }
+  to {
+    transform: translate3d(-15px, 0, 0);
+  }
+}
+@keyframes right {
+  from {
+    transform: translate3d(-9px, 0, 0);
+  }
+  to {
+    transform: translate3d(15px, 0, 0);
+  }
+}
+.text {
+  margin: 9px auto;
+  color: white;
+}
+.text h2 {
+  font-weight: 500;
+}
+.text h4 {
+  font-weight: 300;
+  text-align: right;
+  font-style: italic;
+}
+.menu-open {
+  position: fixed;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left: 93.5%;
+  top: 50px;
+}
+.menu-open.ativo {
+  display: none;
+}
+.top {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 20px;
+  height: 7px;
+  margin-bottom: 7px;
+  margin-left: 20px;
+}
+.bottom {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 40px;
+  height: 7px;
+}
+[data-menu="container"] {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 50;
+  display: none;
+  top: 0;
+}
+[data-menu="container"].ativo {
+  display: flex;
+  justify-content: flex-end;
+}
+.menu {
+  background-color: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 120px 1fr;
+  height: 100vh;
+  width: 50%;
+  cursor: default;
+  animation: show 1.5s forwards;
+  right: 0;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.logo-menu a {
+  display: flex;
+  margin-top: 27px;
+  margin-left: 35px;
+  grid-column: 1 / 2;
+}
+.logo-menu a > * {
+  background-color: black;
+}
+.menu-close {
+  text-transform: uppercase;
+  font-size: 1.75rem;
+  font-weight: bold;
+  grid-column: 2/3;
+  width: 50px;
+  height: 50px;
+  margin-top: 26px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: right;
+  margin-right: 25px;
+}
+.social {
+  display: flex;
+  flex-direction: column;
+  margin-left: 35px;
+}
+.social p {
+  color: #777;
+  font-size: 1.125rem;
+  font-weight: 300;
+  margin-top: 30px;
+}
+.social li {
+  margin-bottom: 50px;
+}
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  margin-left: 35px;
+}
+.menu-links p {
+  color: #777;
+
+  font-size: 1.125rem;
+  font-weight: 300;
+  margin-top: 30px;
+}
+.menu-links li {
+  margin-bottom: 50px;
+}
+.menu-links a {
+  color: black;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+.contato-email {
+  grid-column: 1 / 2;
+  margin-left: 25px;
+  margin-bottom: 20px;
+}
+.ctt-wpp {
+  grid-column: 2 / 3;
+  margin-left: 35px;
+}
+.nav-menu {
+  width: 80%;
+  margin: 100px auto;
+}
+.nav-menu ul {
+  display: flex;
+  justify-content: center;
+}
+.nav-menu li h1 {
+  font-size: 2rem;
+}
+.nav-menu li {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 250px;
+  position: relative;
+  cursor: pointer;
+}
+.nav-menu li::after {
+  content: "";
+  display: none;
+  height: 3px;
+  width: 200px;
+  background-color: #e60c7c;
+  position: absolute;
+  bottom: 0;
+}
+
+.nav-menu li.ativo::after {
+  display: block;
+  animation: a 0.5s forwards;
+}
+
+[data-section="marcas"] {
+  width: 100%;
+  height: 50vh;
+}
+
+@keyframes a {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+footer {
+  background-color: white;
+  position: absolute;
+  height: 75vh;
+  width: 100%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+footer .inside-container {
+  width: 80%;
+}
+footer .inside-container > * {
+  margin: 4rem 0;
+}
+footer .text-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .text-logo .logo-footer a {
+  display: flex;
+}
+footer .text-logo .logo-footer a > * {
+  background-color: black;
+}
+footer .ctt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .ctt-social {
+  display: flex;
+  align-items: center;
+}
+footer .ctt-social a {
+  margin-left: 50px;
+}

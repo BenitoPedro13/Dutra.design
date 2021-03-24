@@ -48,11 +48,29 @@ a {
 }
 .brand {
   display: flex;
-  width: fit-content;
+  width: 160px;
   justify-content: space-between;
 }
 .logo {
   display: flex;
+  justify-content: center;
+  width: 57px;
+}
+.brand .logo > * {
+  display: none;
+}
+.brand .logo .mid.ativo {
+  display: block;
+  margin: 0;
+  animation: mid 1s forwards;
+}
+.brand .logo .left.ativo {
+  display: block;
+  animation: left 0.5s forwards;
+}
+.brand .logo .right.ativo {
+  display: block;
+  animation: right 0.5s forwards;
 }
 .mid {
   display: block;
@@ -60,6 +78,7 @@ a {
   height: 66px;
   background-color: black;
   margin: 0 15px;
+  left: 50%;
 }
 .left {
   display: block;
@@ -74,6 +93,33 @@ a {
   height: 25px;
   background-color: black;
   margin-top: 12px;
+}
+
+@keyframes mid {
+  from {
+    height: 0;
+    margin: 0;
+  }
+  to {
+    height: 66px;
+    margin: 0;
+  }
+}
+@keyframes left {
+  from {
+    transform: translate3d(9px, 0, 0);
+  }
+  to {
+    transform: translate3d(-15px, 0, 0);
+  }
+}
+@keyframes right {
+  from {
+    transform: translate3d(-9px, 0, 0);
+  }
+  to {
+    transform: translate3d(15px, 0, 0);
+  }
 }
 header h1 {
   color: black;
