@@ -15,6 +15,7 @@ class Slide {
 
   moveSlide(distX) {
     this.dist.movePosition = distX;
+    console.log(distX)
     this.slide.style.transform = `translate3d(${distX}px, 0, 0)`;
   }
 
@@ -78,6 +79,7 @@ class Slide {
   slidesConfig() {
     this.slideArray = [...this.slide.children].map((element) => {
       const position = this.slidePosition(element);
+      console.log(position)
       return { position, element };
     });
   }

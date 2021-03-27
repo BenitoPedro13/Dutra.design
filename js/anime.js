@@ -60,29 +60,17 @@ export default function initAnimar() {
         targets: '.hero .bg path',
         strokeDashoffset: [
           {value: 0},
-          {value: anime.setDashoffset, delay: 6000, duration: 3000},
+          {value: anime.setDashoffset, delay: 4000, duration: 4000},
         ],
+        scale: 1.01,
+        rotate: [0, 1.5],
         direction: 'alternate',
         easing: 'easeInOutSine',
         delay: function(el, i) { return i * 250 },
         loop: true
       });
-      anime({
-        targets: '.hero .bg path',
-        translateY: 15,
-        rotateX: 4,
-        keyframes: [
-          {rotate: -2, duration: 1000},
-          {scale: 1.02, duration: 1000},
-          {rotate: 4, duration: 1000}
-        ],
-        easing: 'easeInOutSine',
-        direction: 'alternate',
-        delay: function(el, i) { return i * 250 },
-        loop: true
-      });
-    }, 2500);
-  }
+  });
+}
 
   levitar();
 
@@ -157,16 +145,4 @@ export default function initAnimar() {
   scroll();
 
   brand.addEventListener("mouseover", x, { once: true });
-
-  const sections = document.querySelectorAll('[data-select]');
-  if (sections) {
-    
-    function s(e) {
-      sections.forEach(r => {
-        r.classList.remove("ativo");
-      });
-      e.currentTarget.classList.add('ativo');
-    }  
-    sections.forEach(r => r.addEventListener("click", s));
-  }
 }
