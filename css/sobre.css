@@ -125,6 +125,8 @@ header h1 {
   color: black;
   font-weight: 500;
   font-size: 2.5rem;
+  position: absolute;
+  right: calc(50% - 58px);
 }
 .menu-open {
   position: fixed;
