@@ -60,6 +60,8 @@ a {
   display: flex;
   justify-content: center;
   width: 57px;
+  position: relative;
+  right: calc(5vw + 27px);
 }
 .brand .logo > * {
   display: none;
@@ -170,6 +172,7 @@ a {
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
+  animation: contshow 0.3s forwards;
   position: fixed;
   z-index: 50;
   display: none;
@@ -189,8 +192,26 @@ a {
   height: 100vh;
   width: 50%;
   cursor: default;
-  animation: show 1.5s forwards;
+  animation: show 0.5s forwards;
   right: 0;
+}
+
+@keyframes contunshow {
+  from {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  to {
+    background: rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes contshow {
+  from {
+    background: rgba(0, 0, 0, 0);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.5);
+  }
 }
 
 @keyframes show {
@@ -201,6 +222,17 @@ a {
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes unshow {
+  from {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(200px, 0, 0);
   }
 }
 .logo-menu a {
