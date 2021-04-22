@@ -7,14 +7,14 @@ export default function initAnimar() {
   const menu = document.querySelector(".menu");
 
   if (botaoAbrir && botaoFechar && containerMenu && menu) {
-    function abrirMenu(event) {
+    function aMenu(event) {
       containerMenu.style.animation = "contshow .3s forwards";
       menu.style.animation = "show .5s forwards";
       containerMenu.classList.add("ativo");
       botaoAbrir.classList.add("ativo");
     }
 
-    function fecharMenu(event) {
+    function fMenu(event) {
       containerMenu.style.animation = "contunshow .3s forwards";
       menu.style.animation = "unshow .5s forwards";
       setTimeout(() => {
@@ -24,11 +24,11 @@ export default function initAnimar() {
     }
 
     function cliqueForaMenu(event) {
-      event.target === this ? fecharMenu(event) : null;
+      event.target === this ? fMenu(event) : null;
     }
 
-    botaoAbrir.addEventListener("click", abrirMenu);
-    botaoFechar.addEventListener("click", fecharMenu);
+    botaoAbrir.addEventListener("click", aMenu);
+    botaoFechar.addEventListener("click", fMenu);
     containerMenu.addEventListener("click", cliqueForaMenu);
   }
 
