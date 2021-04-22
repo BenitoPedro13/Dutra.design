@@ -1,56 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/contato.css">
-  <title>Dutra Design | Contato</title>
-</head>
-<body>
-  <div class="header-grid">
-    <header>
-      <a href="index.html">
-        <div class="brand">
-          <div class="logo">
-            <span data-anime="logo-side" class="left"></span>
-            <span data-anime="logo-mid" class="mid"></span>
-            <span data-anime="logo-side" class="right"></span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/contato.css" />
+    <title>Dutra Design | Contato</title>
+  </head>
+  <body>
+    <div class="header-grid">
+      <header>
+        <a href="index.html">
+          <div class="brand">
+            <div class="logo">
+              <span data-anime="logo-side" class="left"></span>
+              <span data-anime="logo-mid" class="mid"></span>
+              <span data-anime="logo-side" class="right"></span>
+            </div>
           </div>
+        </a>
+
+        <h1>Contato</h1>
+
+        <span class="menu-txt">menu</span>
+      </header>
+    </div>
+
+    <div data-menu="open" class="menu-open">
+      <span class="top"></span>
+      <span class="bottom"></span>
+    </div>
+
+    <main>
+      <section class="contato">
+        <div class="contato-text">
+          <h1>Oi! Conte-nos<br />tudo o que quiser 😁</h1>
         </div>
-      </a>
-      
-      <h1>Contato</h1>
-
-      <span class="menu-txt">menu</span>
-    </header>
-  </div>
-
-  <div data-menu="open" class="menu-open">
-    <span class="top"></span>
-    <span class="bottom"></span>
-  </div>
-
-  <main>
-    <section class="contato">
-      <div class="contato-text">
-        <h1>Oi! Conte-nos<br>tudo o que quiser 😁</h1>
-      </div>
-      <div class="contato-form">
-        <form action="contactform.php" id="contato-form" method="POST">
-          <input type="text" name="name" class="contato-input" placeholder="Seu nome" required>
-          <br>
-          <input name="email" type="text" class="contato-input" id="contato-form" placeholder="Seu e-mail" required>
-          <br>
-          <input name="assunto" type="text" class="contato-input" id="contato-form" placeholder="Assunto" required>
-          <textarea name="mensagem" class="contato-input" id="contato-form" placeholder="Fale mais sobre o seu projeto"></textarea>
-          <br>
-          <button type="submit" name="enviar">👉 Entre em contato 👈</button>
-        </form>
-      </div>
-    </section>
-    <div class="cursor"></div>
-  </main>
+        <div class="contato-form">
+          <form action="/api-contact" id="contato-form" method="POST">
+            <input
+              type="text"
+              name="nome"
+              class="contato-input"
+              placeholder="Seu nome"
+              required
+            />
+            <br />
+            <input
+              name="email"
+              type="text"
+              class="contato-input"
+              id="contato-form"
+              placeholder="Seu e-mail"
+              required
+            />
+            <br />
+            <input
+              name="assunto"
+              type="text"
+              class="contato-input"
+              id="contato-form"
+              placeholder="Assunto"
+              required
+            />
+            <textarea
+              name="mensagem"
+              class="contato-input"
+              id="contato-form"
+              placeholder="Fale mais sobre o seu projeto"
+              required
+            ></textarea>
+            <br />
+            <button type="submit">👉 Entre em contato 👈</button>
+          </form>
+        </div>
+      </section>
+      <div class="cursor"></div>
+    </main>
 
     <div data-menu="container" class="menu-container">
       <div class="menu">
@@ -61,65 +87,74 @@
             <span class="right"></span>
           </div>
         </a>
-  
+
         <span data-menu="close" class="menu-close">X</span>
-  
+
         <ul class="social">
-          <li><p>redes sociais</p></li>
-          <li><a href="https://www.behance.net/marcusdutradesign"><img src="./images/Be-icon-white.svg" alt="Behance link"></a></li>
-          <li><a href="https://www.instagram.com/marcusdutra.design"><img src="./images/IG-icon-white.svg" alt="Instagram link"></a></li>
+          <li><p>Social</p></li>
+          <li>
+            <a href="#"
+              ><img src="./images/Be-icon-white.svg" alt="Behance link"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/marcusdutra.design"
+              ><img src="./images/IG-icon-white.svg" alt="Instagram link"
+            /></a>
+          </li>
         </ul>
-  
+
         <ul class="menu-links">
-          <li><p>menu</p></li>
-          <li><a href="./portifolio.html" class="hover-this"><span>portifólio</span></a></li>
-          <li><a href="./contato.html" class="hover-this"><span>contato</span></a></li>
-          <li><a href="./sobre.html" class="hover-this"><span>sobre</span></a></li>
+          <li><p>Menu</p></li>
+          <li><a href="./portifolio.html">portifólio</a></li>
+          <li><a href="./contato.html">contato</a></li>
+          <li><a href="./sobre.html">sobre</a></li>
         </ul>
-  
-        
+
         <div class="contato-email">
-          <h4>faça contato</h4>
+          <h4>Entrar em contato</h4>
           <p>contato@dutra.design</p>
         </div>
-          
-        <a href="#" class="ctt-wpp"><img src="./images/Wpp-icon-white.svg" alt="WhatsApp link"></a>
-        
-  
-      </div>
-    </div>
-  <footer>
-    <div class="inside-container">
-      <div class="text-logo">
-        <h1>Fale pra gente<br>sobre sua ideia</h1>
 
-        <a href="./index.html">
-          <div class="logo-footer">
-            <span class="left"></span>
-            <span class="mid"></span>
-            <span class="right"></span>
-          </div>
+        <a href="#" class="ctt-wpp">
+          <img src="./images/Wpp-icon-white.svg" alt="WhatsApp link" />
+          <p>falar agora</p>
         </a>
-
-      </div>
-      <a href="#" class="ctt-wpp"><img src="./images/Wpp-icon-white.svg" alt="WhatsApp link"></a>
-      <div class="ctt">
-        <div class="ctt-text">
-          <h3>contato@dutra.design</h3>
-          <p>+55 21 99067-8275</p>
-        </div>
-        <div class="ctt-social">
-          <a href="https://www.behance.net/marcusdutradesign">
-            <img src="./images/Be-icon-white.svg" alt="Behance link">
-          </a>
-          <a href="https://www.instagram.com/marcusdutra.design">
-            <img src="./images/IG-icon-white.svg" alt="Instagram link">
-          </a>
-        </div>
       </div>
     </div>
-  </footer>
-  <script type="module" src="./js/anime-master/lib/anime.es.js"></script>
-  <script type="module" src="./js/script.js"></script>
-</body>
+    <footer>
+      <div class="inside-container">
+        <div class="text-logo">
+          <h1>Fale pra gente<br />sobre sua ideia</h1>
+          <a href="./index.html">
+            <div class="logo-footer">
+              <span class="left"></span>
+              <span class="mid"></span>
+              <span class="right"></span>
+            </div>
+          </a>
+        </div>
+        <a href="#" class="ctt-wpp">
+          <img src="./images/Wpp-icon-white.svg" alt="WhatsApp link" />
+          <p>falar agora</p>
+        </a>
+        <div class="ctt">
+          <div class="ctt-text">
+            <h3>contato@dutra.design</h3>
+            <p>+55 21 99067-8275</p>
+          </div>
+          <div class="ctt-social">
+            <a href="#">
+              <img src="./images/Be-icon-white.svg" alt="Behance link" />
+            </a>
+            <a href="https://www.instagram.com/marcusdutra.design">
+              <img src="./images/IG-icon-white.svg" alt="Instagram link" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="./js/anime-master/lib/anime.es.js"></script>
+    <script type="module" src="./js/script.js"></script>
+  </body>
 </html>

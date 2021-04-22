@@ -10,7 +10,7 @@
 <body>
   <div class="preloader"><h1>Loading....</h1></div>
   <script>
-    window.onload = () => {document.querySelector('.preloader').style.display = 'none'}
+    window.addEventListener('load', () => {document.querySelector('.preloader').style.display = 'none'});
   </script>
   <div class="header-grid">
     <header>
@@ -488,25 +488,28 @@
         <span data-menu="close" class="menu-close">X</span>
   
         <ul class="social">
-          <li><p>redes sociais</p></li>
+          <li><p>Social</p></li>
           <li><a href="https://www.behance.net/marcusdutradesign"><img src="./images/Be-icon.svg" alt="Behance link"></a></li>
           <li><a href="https://www.instagram.com/marcusdutra.design"><img src="./images/IG-icon.svg" alt="Instagram link"></a></li>
         </ul>
   
         <ul class="menu-links">
-          <li><p>menu</p></li>
-          <li><a href="./portifolio.html">portifólio</a></li>
-          <li><a href="./contato.html">contato</a></li>
-          <li><a href="./sobre.html">sobre</a></li>
+          <li><p>Menu</p></li>
+          <li><a href="./portifolio.html">Portifólio</a></li>
+          <li><a href="./contato.html">Contato</a></li>
+          <li><a href="./sobre.html">Sobre</a></li>
         </ul>
   
         
         <div class="contato-email">
-          <h4>faça contato</h4>
+          <h4>Entrar em contato</h4>
           <p>contato@dutra.design</p>
         </div>
           
-        <a href="#" class="ctt-wpp"><img src="./images/Wpp-icon.svg" alt="WhatsApp link"></a>
+        <a href="#" class="ctt-wpp">
+          <img src="./images/Wpp-icon-white.svg" alt="WhatsApp link">
+          <p>falar agora</p>
+        </a>
         
   
       </div>
@@ -525,7 +528,10 @@
             </a>
           </div>
         </div>
-        <a href="#" class="ctt-wpp"><img src="./images/Wpp-icon.svg" alt="WhatsApp link"></a>
+        <a href="#" class="ctt-wpp">
+          <img src="./images/Wpp-icon-white.svg" alt="WhatsApp link">
+          <p>falar agora</p>
+        </a>
         <div class="ctt">
           <div class="ctt-text">
             <h3>contato@dutra.design</h3>
