@@ -139,6 +139,17 @@ header h1 {
   justify-content: center;
   left: 93.5%;
   top: 50px;
+  animation: b 0.4s forwards;
+}
+@keyframes b {
+  from {
+    opacity: 0;
+    transform: translate3d(50px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 .menu-open.ativo {
   display: none;
@@ -226,10 +237,7 @@ header h1 {
 }
 
 .logo-menu {
-  display: flex;
-  margin-top: 27px;
-  margin-left: 35px;
-  grid-column: 1 / 2;
+  display: none;
 }
 .logo-menu > * {
   background-color: white;
