@@ -22,11 +22,8 @@
 *::-webkit-scrollbar-thumb {
   border-radius: 20px;
   cursor: pointer;
-  height: 15vh;
-}
-*::-webkit-scrollbar-thumb:hover {
   height: 20vh;
-  background: rgb(255, 255, 255);
+  background: transparent;
 }
 html {
   background: linear-gradient(
