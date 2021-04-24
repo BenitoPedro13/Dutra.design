@@ -679,31 +679,34 @@ a {
   font-weight: normal;
   margin-bottom: 13rem;
 }
-.icon-pesquisa {
+.icone {
   display: flex;
 }
-.icon-pesquisa .left {
+.icone .lef {
   width: 25px;
   height: 80px;
+  background: white;
   margin-top: 0;
 }
-.icon-pesquisa .mid {
+.icone .md {
   width: 25px;
+  background: white;
   height: 200px;
   margin: 0 45px;
 }
-.icon-pesquisa .right {
+.icone .rig {
   width: 25px;
+  background: white;
   height: 80px;
   margin-top: 0;
 }
-.how-text h3 {
+.entrada h3 {
   margin-top: 50px;
   font-size: 1.5rem;
   text-align: center;
   margin-bottom: 2rem;
 }
-.how-text p {
+.entrada p {
   text-align: center;
   font-size: 1.25rem;
 }
