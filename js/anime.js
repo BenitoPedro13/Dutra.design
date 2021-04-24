@@ -7,28 +7,30 @@ export default function initAnimar() {
   const menu = document.querySelector(".menu");
 
   if (botaoAbrir && botaoFechar && containerMenu && menu) {
-    function aMenu(event) {
+    function abrirMenu(event) {
       containerMenu.style.animation = "contshow .3s forwards";
       menu.style.animation = "show .5s forwards";
       containerMenu.classList.add("ativo");
       botaoAbrir.classList.add("ativo");
     }
 
-    function fMenu(event) {
+    function fecharMenu(event) {
       containerMenu.style.animation = "contunshow .3s forwards";
       menu.style.animation = "unshow .5s forwards";
       setTimeout(() => {
-        containerMenu.classList.remove("ativo");
         botaoAbrir.classList.remove("ativo");
+      }, 150);
+      setTimeout(() => {
+        containerMenu.classList.remove("ativo");
       }, 450);
     }
 
     function cliqueForaMenu(event) {
-      event.target === this ? fMenu(event) : null;
+      event.target === this ? fecharMenu(event) : null;
     }
 
-    botaoAbrir.addEventListener("click", aMenu);
-    botaoFechar.addEventListener("click", fMenu);
+    botaoAbrir.addEventListener("click", abrirMenu);
+    botaoFechar.addEventListener("click", fecharMenu);
     containerMenu.addEventListener("click", cliqueForaMenu);
   }
 
@@ -154,10 +156,6 @@ export default function initAnimar() {
   }
 
   hero();
-
-  function scroll() {}
-
-  scroll();
 
   brand.addEventListener("mouseover", x, { once: true });
 }
