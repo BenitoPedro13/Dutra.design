@@ -8,6 +8,20 @@
     <title>Dutra Design | Portifólio</title>
   </head>
   <body>
+    <div class="preloader">
+      <div class="progress-bar"></div>
+      <h1>Loading....</h1>
+    </div>
+    <script>
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          document.querySelector(".preloader").style.display = "none";
+          document
+            .querySelector("*::-webkit-scrollbar-track")
+            .classList.add("ativo");
+        }, 1500);
+      });
+    </script>
     <div class="header-grid">
       <header>
         <a href="index.html">

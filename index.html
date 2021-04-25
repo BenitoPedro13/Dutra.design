@@ -8,10 +8,18 @@
   <title>Dutra Design | Inicio</title>
 </head>
 <body>
-  <div class="preloader"><h1>Loading....</h1></div>
-  <script>
-    window.addEventListener('load', () => {document.querySelector('.preloader').style.display = 'none'});
-  </script>
+  <div class="preloader">
+    <div class="progress-bar"></div>
+    <h1>Loading....</h1>
+  </div>
+    <script>
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          document.querySelector(".preloader").style.display = "none";
+          document.querySelector('*::-webkit-scrollbar-track').classList.add('ativo');
+        }, 1500);
+      });
+    </script>
   <div class="header-grid">
     <header>
         <div class="brand">
