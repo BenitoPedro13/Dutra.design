@@ -8,35 +8,68 @@ export default function initAnimar() {
 
   if (botaoAbrir && botaoFechar && containerMenu && menu) {
     function abrirMenu(event) {
-      containerMenu.style.animation = "contshow .3s forwards";
-      menu.style.animation = "show .5s forwards";
-      containerMenu.classList.add("ativo");
-      botaoAbrir.classList.add("ativo");
-    }
-
-    function fecharMenu(event) {
-      containerMenu.style.animation = "contunshow .3s forwards";
-      menu.style.animation = "unshow .5s forwards";
-      setTimeout(() => {
+      if (botaoAbrir.classList.contains("inactive")) {
+        botaoAbrir.classList.remove("inactive");
+        containerMenu.style.animation = "contshow .3s forwards";
+        menu.style.animation = "show .5s forwards";
+        containerMenu.classList.add("ativo");
+        botaoAbrir.classList.add("ativo");
+        anime({
+          targets: '[data-menu="open"] .top',
+          width: "40px",
+          background: "#000",
+          rotate: "45deg",
+          easing: "easeInOutSine",
+          duration: 500,
+        });
+        anime({
+          targets: '[data-menu="open"] .bottom',
+          translateY: "-14px",
+          translateX: "8px",
+          background: "#000",
+          rotate: "-45deg",
+          easing: "easeInOutSine",
+          duration: 500,
+        });
+      } else if (botaoAbrir.classList.contains("ativo")) {
         botaoAbrir.classList.remove("ativo");
-      }, 150);
-      setTimeout(() => {
-        containerMenu.classList.remove("ativo");
-      }, 450);
+        containerMenu.style.animation = "contunshow .3s forwards";
+        menu.style.animation = "unshow .5s forwards";
+        setTimeout(() => {
+          containerMenu.classList.remove("ativo");
+        }, 500);
+        botaoAbrir.classList.add("inactive");
+        anime({
+          targets: '[data-menu="open"] .top',
+          width: "20px",
+          background: "#fff",
+          rotate: "0deg",
+          easing: "easeInOutSine",
+          duration: 500,
+        });
+        anime({
+          targets: '[data-menu="open"] .bottom',
+          translateY: "0px",
+          translateX: "0px",
+          background: "#fff",
+          rotate: "0deg",
+          easing: "easeInOutSine",
+          duration: 500,
+        });
+      }
     }
 
     function cliqueForaMenu(event) {
-      event.target === this ? fecharMenu(event) : null;
+      event.target === this ? abrirMenu(event) : null;
     }
 
     botaoAbrir.addEventListener("click", abrirMenu);
-    botaoFechar.addEventListener("click", fecharMenu);
     containerMenu.addEventListener("click", cliqueForaMenu);
   }
 
   function y() {
     anime({
-      targets: '[data-menu="open"] .top',
+      targets: '[data-menu="open"].inactive .top',
       translateY: [
         { value: 14, duration: 250 },
         { value: 0, duration: 250, delay: 500 },
@@ -48,7 +81,7 @@ export default function initAnimar() {
       easing: "easeInOutSine",
     });
     anime({
-      targets: '[data-menu="open"] .bottom',
+      targets: '[data-menu="open"].inactive .bottom',
       translateY: [
         { value: -14, duration: 250 },
         { value: 0, duration: 250, delay: 500 },
@@ -59,15 +92,11 @@ export default function initAnimar() {
       ],
       easing: "easeInOutSine",
     });
-    setTimeout(
-      () => botaoAbrir.addEventListener("mouseover", y, { once: true }),
-      1600
-    );
   }
 
-  window.addEventListener("load", () => {
-    setTimeout(y, 2000);
-  });
+  //window.addEventListener("load", () => {
+  //  setTimeout(y, 2000);
+  //});
 
   function levitar(e) {
     setTimeout(() => {
