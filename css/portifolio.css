@@ -33,6 +33,14 @@
     width: 0px;
   }
   to {
+    width: 75vw;
+  }
+}
+@keyframes fullload {
+  from {
+    width: 75vw;
+  }
+  to {
     width: 100vw;
   }
 }
