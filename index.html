@@ -12,14 +12,20 @@
     <div class="progress-bar"></div>
     <h1>Loading....</h1>
   </div>
-    <script>
-      window.addEventListener("load", () => {
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.querySelector(".progress-bar").style.animation =
+          "fullload .5s forwards";
         setTimeout(() => {
           document.querySelector(".preloader").style.display = "none";
-          document.querySelector('*::-webkit-scrollbar-track').classList.add('ativo');
-        }, 1500);
-      });
-    </script>
+          document
+            .querySelector("*::-webkit-scrollbar-track")
+            .classList.add("ativo");
+        }, 500);
+      }, 1500);
+    });
+  </script>
   <div class="header-grid">
     <header>
         <div class="brand">

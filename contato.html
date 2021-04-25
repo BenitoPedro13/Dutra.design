@@ -15,10 +15,14 @@
     <script>
       window.addEventListener("load", () => {
         setTimeout(() => {
-          document.querySelector(".preloader").style.display = "none";
-          document
-            .querySelector("*::-webkit-scrollbar-track")
-            .classList.add("ativo");
+          document.querySelector(".progress-bar").style.animation =
+            "fullload .5s forwards";
+          setTimeout(() => {
+            document.querySelector(".preloader").style.display = "none";
+            document
+              .querySelector("*::-webkit-scrollbar-track")
+              .classList.add("ativo");
+          }, 500);
         }, 1500);
       });
     </script>
