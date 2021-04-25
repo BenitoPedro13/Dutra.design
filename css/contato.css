@@ -373,6 +373,40 @@ header h1 {
 .menu-links li {
   margin-bottom: 50px;
 }
+.menu-links li a::after {
+  content: "";
+  display: none;
+  height: 3px;
+  width: 200px;
+  position: absolute;
+}
+
+.menu-links li a.ativo::after {
+  max-width: 200px;
+  display: block;
+  background: linear-gradient(
+    to left,
+    #e60c7d,
+    #e60c7c,
+    #f28c00,
+    #674186,
+    #4f368c,
+    #4f368c,
+    #0f75bb,
+    #035c98
+  );
+  border-radius: 5px;
+  animation: a 1s forwards;
+}
+
+@keyframes a {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
 .menu-links a {
   color: white;
   font-size: 2.5rem;
