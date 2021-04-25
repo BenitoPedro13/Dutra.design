@@ -246,11 +246,11 @@ a {
   }
 }
 .menu-open.ativo {
-  display: none;
+  z-index: 51;
 }
 .top {
   display: block;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 0, 0, 0.9) !important;
   width: 20px;
   height: 7px;
   margin-bottom: 7px;
@@ -258,7 +258,7 @@ a {
 }
 .bottom {
   display: block;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 0, 0, 0.9) !important;
   width: 40px;
   height: 7px;
 }
@@ -348,6 +348,7 @@ a {
   font-size: 1.75rem;
   font-weight: bold;
   grid-column: 2/3;
+  color: transparent;
   width: 50px;
   height: 50px;
   margin-top: 26px;
@@ -389,6 +390,7 @@ a {
 .menu-links a {
   color: black;
   font-size: 2.5rem;
+  font-weight: bold;
 }
 .contato-email {
   grid-column: 1 / 2;
