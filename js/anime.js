@@ -98,6 +98,18 @@ export default function initAnimar() {
   //  setTimeout(y, 2000);
   //});
 
+  const test = document.querySelector(".menu-links");
+
+  test.addEventListener("mouseover", function (event) {
+    // highlight the mouseover target
+    event.target.classList.add("ativo");
+  });
+
+  test.addEventListener("mouseout", function (event) {
+    // highlight the mouseover target
+    event.target.classList.remove("ativo");
+  });
+
   function levitar(e) {
     setTimeout(() => {
       document.querySelector(".hero .bg").style.display = "block";
