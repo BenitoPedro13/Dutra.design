@@ -65,7 +65,9 @@ export default function initAnimar() {
     );
   }
 
-  y();
+  window.addEventListener("load", () => {
+    setTimeout(y, 2000);
+  });
 
   function levitar(e) {
     setTimeout(() => {
@@ -87,17 +89,21 @@ export default function initAnimar() {
         },
         loop: true,
       });
-    });
+    }, 2000);
   }
 
-  levitar();
+  window.addEventListener("load", () => {
+    setTimeout(levitar, 0);
+  });
 
   const brand = document.querySelector(".brand");
   const midBar = document.querySelector('[data-anime="logo-mid"]');
   const sideBars = document.querySelectorAll('[data-anime="logo-side"]');
 
-  setTimeout(() => midBar.classList.add("ativo"), 0);
-  setTimeout(() => sideBars.forEach((r) => r.classList.add("ativo")), 1000);
+  window.addEventListener("load", () => {
+    setTimeout(() => midBar.classList.add("ativo"), 2000);
+    setTimeout(() => sideBars.forEach((r) => r.classList.add("ativo")), 3000);
+  });
 
   function x() {
     midBar.classList.remove("ativo");
@@ -155,7 +161,9 @@ export default function initAnimar() {
     );
   }
 
-  hero();
+  window.addEventListener("load", () => {
+    setTimeout(hero, 2000);
+  });
 
   brand.addEventListener("mouseover", x, { once: true });
 }
