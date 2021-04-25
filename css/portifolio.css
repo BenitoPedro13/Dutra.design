@@ -244,7 +244,7 @@ a {
   }
 }
 .menu-open.ativo {
-  display: none;
+  z-index: 51;
 }
 .top {
   display: block;
@@ -348,6 +348,7 @@ a {
   grid-column: 2/3;
   width: 50px;
   height: 50px;
+  color: transparent;
   margin-top: 26px;
   cursor: pointer;
   display: flex;
@@ -387,6 +388,7 @@ a {
 .menu-links a {
   color: black;
   font-size: 2.5rem;
+  font-weight: bold;
 }
 .contato-email {
   grid-column: 1 / 2;

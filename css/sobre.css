@@ -235,11 +235,20 @@ header h1 {
 }
 
 .menu-open.ativo {
-  display: none;
+  z-index: 51;
 }
+
+.menu-open.ativo .top {
+  background-color: white !important;
+}
+
+.menu-open.ativo .bottom {
+  background-color: white !important;
+}
+
 .top {
   display: block;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.9) !important;
   width: 20px;
   height: 7px;
   margin-bottom: 7px;
@@ -247,7 +256,7 @@ header h1 {
 }
 .bottom {
   display: block;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.9) !important;
   width: 40px;
   height: 7px;
 }
@@ -329,6 +338,7 @@ header h1 {
   font-size: 1.75rem;
   font-weight: bold;
   grid-column: 2/3;
+  color: transparent;
   width: 50px;
   height: 50px;
   margin-top: 26px;
@@ -338,7 +348,6 @@ header h1 {
   justify-content: center;
   justify-self: right;
   margin-right: 25px;
-  color: white;
 }
 .social {
   display: flex;
@@ -371,6 +380,7 @@ header h1 {
 .menu-links a {
   color: white;
   font-size: 2.5rem;
+  font-weight: bold;
 }
 .contato-email {
   color: white;
