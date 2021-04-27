@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./tanoshime.css" />
+    <title>Dutra Design | Tanoshime</title>
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="progress-bar"></div>
+      <h1>Loading....</h1>
+    </div>
+    <script>
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          document.querySelector(".progress-bar").style.animation =
+            "fullload .5s forwards";
+          setTimeout(() => {
+            document.querySelector(".preloader").style.display = "none";
+            document
+              .querySelector("*::-webkit-scrollbar-track")
+              .classList.add("ativo");
+          }, 500);
+        }, 1500);
+      });
+    </script>
+    <div class="header-grid">
+      <header>
+        <a href="../index.html">
+          <div class="brand">
+            <div class="logo">
+              <span
+                data-anime="logo-side"
+                class="left"
+                style="background-color: rgb(255, 255, 255)"
+              ></span>
+              <span
+                data-anime="logo-mid"
+                class="mid"
+                style="background-color: rgb(255, 255, 255)"
+              ></span>
+              <span
+                data-anime="logo-side"
+                class="right"
+                style="background-color: rgb(255, 255, 255)"
+              ></span>
+            </div>
+          </div>
+        </a>
+        <span
+          class="menu-txt"
+          style="
+            color: rgb(255, 255, 255);
+            font-weight: 500;
+            mix-blend-mode: difference;
+          "
+          >menu</span
+        >
+      </header>
+
+      <div data-menu="open" class="menu-open inactive">
+        <span class="top"></span>
+        <span class="bottom"></span>
+      </div>
+    </div>
+
+    <div class="pjt-cont">
+      <img
+        style="width: 100vw"
+        src="../portifolio/ocean/parte 1.jpg"
+        alt="">
+    </div>
+
+    <div data-menu="container" class="menu-container">
+      <div class="menu">
+        <div class="menu-body">
+          <div class="menu-cont">
+            <div class="menu-grid">
+              <div class="menu-grid-col -left">
+                <div class="menu-title">Social</div>
+                <div class="menu-social">
+                  <a
+                    class="menu-social-item"
+                    href="https://www.behance.net/marcusdutradesign"
+                    ><img src="../images/Be-icon-white.svg" alt="Behance link"
+                  /></a>
+                  <a
+                    class="menu-social-item"
+                    href="https://www.instagram.com/marcusdutra.design"
+                    ><img
+                      src="../images/IG-icon-white.svg"
+                      alt="Instagram link"
+                  /></a>
+                </div>
+              </div>
+              <div class="menu-grid-col -right">
+                <div class="menu-title">Menu</div>
+                <div class="menu-nav">
+                  <div class="menu-nav-item">
+                    <a href="../portifolio.html">Portifólio</a>
+                  </div>
+                  <div class="menu-nav-item">
+                    <a href="../contato.html">Contato</a>
+                  </div>
+                  <div class="menu-nav-item">
+                    <a href="../sobre.html">Sobre</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-footer">
+          <div class="menu-cont">
+            <div class="menu-grid">
+              <div class="menu-grid-col -left">
+                <div class="menu-title">Entrar em contato</div>
+                <div class="menu-mail">
+                  <a href="mailto:contato@dutra.design">contato@dutra.design</a>
+                </div>
+              </div>
+              <div class="menu-grid-col -right">
+                <a href="https://WA.me/5521990678275" class="ctt-wpp">
+                  <img src="../images/Wpp-icon-white.svg" alt="WhatsApp link" />
+                  <p>falar agora</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="inside-container">
+        <div class="text-logo">
+          <h1>Fale pra gente<br />sobre sua ideia</h1>
+
+          <div class="logo-footer">
+            <a href="../index.html">
+              <span class="left"></span>
+              <span class="mid"></span>
+              <span class="right"></span>
+            </a>
+          </div>
+        </div>
+        <a href="https://WA.me/5521990678275" class="ctt-wpp">
+          <img src="../images/Wpp-icon-white.svg" alt="WhatsApp link" />
+          <p>falar agora</p>
+        </a>
+        <div class="ctt">
+          <div class="ctt-text">
+            <h3>contato@dutra.design</h3>
+            <p>+55 21 99067-8275</p>
+          </div>
+          <div class="ctt-social">
+            <a href="https://www.behance.net/marcusdutradesign">
+              <img src="../images/Be-icon.svg" alt="Behance link" />
+            </a>
+            <a href="https://www.instagram.com/marcusdutra.design">
+              <img src="../images/IG-icon.svg" alt="Instagram link" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="../js/anime-master/lib/anime.es.js"></script>
+    <script type="module" src="../js/script-projetos.js"></script>
+  </body>
+</html>
