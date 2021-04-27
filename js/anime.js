@@ -6,7 +6,7 @@ export default function initAnimar() {
   const containerMenu = document.querySelector('[data-menu="container"]');
   const menu = document.querySelector(".menu");
 
-  if (botaoAbrir && botaoFechar && containerMenu && menu) {
+  if (botaoAbrir && containerMenu && menu) {
     function abrirMenu(event) {
       if (botaoAbrir.classList.contains("inactive")) {
         botaoAbrir.classList.remove("inactive");
@@ -98,7 +98,7 @@ export default function initAnimar() {
   //  setTimeout(y, 2000);
   //});
 
-  const test = document.querySelector(".menu-links");
+  const test = document.querySelector(".menu-nav");
 
   test.addEventListener("mouseover", function (event) {
     // highlight the mouseover target

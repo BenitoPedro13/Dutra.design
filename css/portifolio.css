@@ -279,15 +279,28 @@ a {
 .menu {
   background-color: rgba(255, 255, 255, 0.9);
   position: fixed;
-  color: black;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 120px 1fr;
   height: 100vh;
-  width: 50vw;
-  cursor: default;
+
   animation: show 0.5s forwards;
+  top: 0;
   right: 0;
+  z-index: 200;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 50px 0 90px 0;
+}
+
+.menu-cont {
+  width: 100%;
+  padding: 0 30px 0 45px;
+}
+
+.menu-grid-col.-left {
+  display: none;
+}
+
+.menu-footer {
+  padding: 70px 0 0 0;
 }
 
 @keyframes contunshow {
@@ -329,65 +342,61 @@ a {
     transform: translate3d(200px, 0, 0);
   }
 }
-
-.logo-menu {
-  display: none;
+.menu-nav {
+  margin: -4px 0;
+  padding: 30px 0 0 0;
+}
+.menu-nav-item {
+  position: relative;
+  display: block;
+  margin: 4px 0;
+}
+.menu-nav-item a {
+  display: inline-block;
+  position: relative;
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 47px;
+  text-decoration: none;
+}
+.menu-title {
+  color: rgb(117, 117, 117);
+  font-size: 16px;
+  line-height: 100%;
+}
+.menu-social {
+  display: inline-block;
+  margin: -24px 0;
+  padding: 40px 0 0 0;
+}
+.menu-social-item {
+  position: relative;
+  display: block;
+  padding: 12px 0;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.00464286em;
+  text-transform: capitalize;
+  text-decoration: none;
 }
 
-.logo-menu a {
-  display: flex;
-  margin-top: 27px;
-  margin-left: 35px;
-  grid-column: 1 / 2;
+.menu-mail {
+  display: block;
+  padding: 12px 0 0 0;
 }
-.logo-menu a > * {
-  background-color: black;
+
+.menu-mail a {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 5px 0;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.00464286em;
+  text-decoration: none;
 }
-.menu-close {
-  text-transform: uppercase;
-  font-size: 1.75rem;
-  font-weight: bold;
-  grid-column: 2/3;
-  width: 50px;
-  height: 50px;
-  color: transparent;
-  margin-top: 26px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-self: right;
-  margin-right: 25px;
-}
-.social {
-  display: flex;
-  flex-direction: column;
-  margin-left: 100px;
-}
-.social p {
-  color: #777;
-  font-size: 1.125rem;
-  font-weight: 300;
-  margin-top: 30px;
-}
-.social li {
-  margin-bottom: 50px;
-}
-.menu-links {
-  display: flex;
-  flex-direction: column;
-  margin-left: 35px;
-}
-.menu-links p {
-  color: #777;
-  font-size: 1.125rem;
-  font-weight: 300;
-  margin-top: 30px;
-}
-.menu-links li {
-  margin-bottom: 50px;
-}
-.menu-links li a::after {
+
+.menu-nav .menu-nav-item a::after {
   content: "";
   display: none;
   height: 3px;
@@ -395,7 +404,7 @@ a {
   position: absolute;
 }
 
-.menu-links li a.ativo::after {
+.menu-nav .menu-nav-item a.ativo::after {
   max-width: 200px;
   display: block;
   background: linear-gradient(
@@ -412,7 +421,9 @@ a {
   border-radius: 5px;
   animation: a 1s forwards;
 }
-
+.menu a {
+  color: black;
+}
 @keyframes a {
   from {
     width: 0%;
@@ -421,29 +432,10 @@ a {
     width: 100%;
   }
 }
-.menu-links a {
-  color: black;
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-.contato-email {
-  grid-column: 1 / 2;
-  margin-left: 25px;
-  height: 100px;
-}
-.contato-email h4 {
-  font-weight: 500;
-  color: #777;
-  font-size: 1rem;
-  margin-bottom: 8px;
-}
-.contato-email p {
-  font-size: 1.5rem;
-}
 .ctt-wpp {
   grid-column: 2 / 3;
-  margin-left: 35px;
-  width: 250px;
+  margin-left: 0px;
+  width: 15rem;
   background: #0eff00;
   height: 50px;
   border-radius: 50px;
@@ -723,4 +715,120 @@ footer .ctt-social {
 }
 footer .ctt-social a {
   margin-left: 50px;
+}
+
+@media (min-width: 768px) and (min-height: 550px) {
+  .menu-body {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  .menu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 20px 0 0 0;
+  }
+  .menu-footer {
+    padding: 0 0 50px 0;
+  }
+  .menu-grid {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  .menu-grid-col.-left {
+    display: block;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+  .menu-grid-col {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+  .menu-social {
+    padding: 60px 0 0 0;
+  }
+  .menu-nav-item a {
+    font-size: 60px;
+    line-height: 74px;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu {
+    width: 689px;
+    left: auto;
+  }
+  .menu-cont {
+    padding: 0 98px;
+  }
+}
+
+@media (min-height: 550px) {
+  .menu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) and (min-height: 600px) {
+  .menu {
+    padding: 40px 0 0 0;
+  }
+}
+
+@media (min-width: 360px) {
+  .menu-nav-item a {
+    font-size: 42px;
+    line-height: 52px;
+  }
 }
