@@ -262,6 +262,9 @@ a {
   width: 40px;
   height: 7px;
 }
+.pjt-cont img {
+  width: 100vw;
+}
 [data-menu="container"] {
   height: 100%;
   width: 100%;
