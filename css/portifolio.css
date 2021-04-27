@@ -98,6 +98,7 @@ html {
     #035c98
   );
   padding: 8px 8px 0 8px;
+  background-repeat: no-repeat;
 }
 li {
   list-style: none;
@@ -107,6 +108,7 @@ body {
   color: white;
   font-family: Montserrat, Georgia, "Times New Roman", Times, serif;
   overflow-x: hidden;
+  height: 2400px;
 }
 img {
   max-width: 100%;
@@ -282,7 +284,7 @@ a {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 120px 1fr;
   height: 100vh;
-  width: 50%;
+  width: 50vw;
   cursor: default;
   animation: show 0.5s forwards;
   right: 0;
@@ -514,8 +516,8 @@ a {
 
 [data-section="1"] {
   width: 80%;
-  margin: 0 auto;
-  height: 280vh;
+  margin: 0 auto 20px auto;
+  height: 2061px;
   display: none;
   flex-wrap: wrap;
   align-items: center;
@@ -525,7 +527,7 @@ a {
 [data-section="0"] {
   width: 80%;
   margin: 0 auto;
-  height: 280vh;
+  height: 1924px;
   display: none;
   flex-wrap: wrap;
   align-items: center;
@@ -535,7 +537,7 @@ a {
 [data-section="2"] {
   width: 80%;
   margin: 0 auto;
-  height: 110vh;
+  height: 756px;
   display: none;
   flex-direction: column-reverse;
   justify-content: center;
@@ -545,8 +547,9 @@ a {
 .bg {
   position: absolute;
   z-index: 0;
-  top: 100vh;
-  left: 2.5vw;
+  top: 687px;
+  left: 2.5%;
+  right: 2.5%;
 }
 
 .projeto-container {
@@ -571,6 +574,9 @@ a {
   line-height: 2rem;
   color: #fff;
 }
+[data-projeto="Sus"] h3 {
+  margin: 2rem 0;
+}
 .projeto .img-container {
   width: 28rem;
   height: 40rem;
@@ -580,7 +586,7 @@ a {
   box-shadow: 2px 3px 10px rgba(0, 0, 255, 0.527);
 }
 .projeto .img-container.bottom {
-  width: 45vw;
+  width: 612px;
 }
 .projeto .img-container img {
   height: 38rem;
@@ -604,8 +610,8 @@ a {
 }
 
 .slide-img-container {
-  width: 60vw;
-  height: 70vh;
+  width: 816px;
+  height: 500px;
   background: transparent;
   margin: 0 auto;
   z-index: 1;
@@ -616,8 +622,8 @@ a {
 }
 
 .slide-img-container img {
-  height: 70vh;
-  width: 60vw;
+  height: 500px;
+  width: 816px;
   z-index: 2;
 }
 
@@ -672,7 +678,7 @@ hr {
 footer {
   background-color: white;
   position: absolute;
-  height: 60vh;
+  height: 412px;
   width: 100%;
   left: 0;
   display: flex;

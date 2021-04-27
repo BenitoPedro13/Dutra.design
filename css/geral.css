@@ -98,6 +98,7 @@ html {
     #035c98
   );
   padding: 8px 8px 0 8px;
+  background-repeat: no-repeat;
 }
 li {
   list-style: none;
@@ -283,7 +284,7 @@ a {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 120px 1fr;
   height: 100vh;
-  width: 50%;
+  width: 50vw;
   cursor: default;
   animation: show 0.5s forwards;
   right: 0;
@@ -468,7 +469,7 @@ a {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  height: 85vh;
+  height: 584px;
 }
 .hero .title {
   font-size: 3rem;
@@ -582,7 +583,7 @@ a {
   font-weight: lighter;
   position: relative;
   z-index: 1;
-  margin: 20vh 0 30vh 0;
+  margin: 138px 0 200px 0;
 }
 .projetos-titulo span {
   font-weight: bold;
@@ -622,7 +623,7 @@ a {
   margin: 0 auto;
   align-items: center;
   justify-content: space-between;
-  height: 130vh;
+  height: 892px;
 }
 .projeto-container[data-projeto="Ilma"] .projeto {
   flex-direction: row-reverse;
@@ -740,7 +741,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 150vh;
+  height: 1030px;
   background-image: url("../images/forma-geometrica-espelhada.png");
   background-size: 50rem;
   background-repeat: no-repeat;
@@ -800,7 +801,7 @@ a {
 footer {
   background-color: white;
   position: absolute;
-  height: 60vh;
+  height: 412px;
   width: 100%;
   left: 0;
   display: flex;

@@ -10,7 +10,7 @@
   content: "";
   display: block;
   height: 8px;
-  width: 100vw;
+
   background: linear-gradient(
     to left,
     #e60c7d,
@@ -98,6 +98,7 @@ html {
     #035c98
   );
   padding: 8px 8px 0 8px;
+  background-repeat: no-repeat;
 }
 li {
   list-style: none;
@@ -282,7 +283,7 @@ header h1 {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 120px 1fr;
   height: 100vh;
-  width: 50%;
+  width: 50vw;
   cursor: default;
   animation: show 0.5s alternate;
   right: 0;
@@ -455,7 +456,7 @@ header h1 {
 }
 .sobre {
   width: 80%;
-  height: 80vh;
+  height: 550px;
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
@@ -486,7 +487,7 @@ header h1 {
 footer {
   background-color: black;
   position: absolute;
-  height: 60vh;
+  height: 412px;
   width: 100%;
   left: 0;
   display: flex;
