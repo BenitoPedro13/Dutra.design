@@ -233,8 +233,24 @@ a {
   justify-content: center;
   right: 3vw;
   z-index: 13;
-  top: 50px;
+  top: 58px;
   animation: b 0.4s forwards;
+}
+
+.menu-open.is-black .top {
+  background-color: rgb(0, 0, 0) !important;
+}
+
+.menu-open.is-black .bottom {
+  background-color: rgb(0, 0, 0) !important;
+}
+
+.menu-open.ativo.is-black .top {
+  background-color: rgb(255, 255, 255) !important;
+}
+
+.menu-open.ativo.is-black .bottom {
+  background-color: rgb(255, 255, 255) !important;
 }
 
 @keyframes b {

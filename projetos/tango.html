@@ -165,5 +165,19 @@
 
     <script type="module" src="../js/anime-master/lib/anime.es.js"></script>
     <script type="module" src="../js/script-projetos.js"></script>
+    <script>
+      const element = document.querySelector(".menu-open");
+      window.addEventListener("scroll", () => {
+        if (
+          (window.pageYOffset <= 684 || window.pageYOffset >= 2478) === true
+        ) {
+          element.classList.remove("is-black");
+        } else if (
+          (window.pageYOffset <= 2478 || window.pageYOffset >= 684) === true
+        ) {
+          element.classList.add("is-black");
+        }
+      });
+    </script>
   </body>
 </html>

@@ -165,5 +165,25 @@
 
     <script type="module" src="../js/anime-master/lib/anime.es.js"></script>
     <script type="module" src="../js/script-projetos.js"></script>
+    <script>
+      const element = document.querySelector(".menu-open");
+      window.addEventListener("scroll", () => {
+        if (
+          window.pageYOffset <= 700 ||
+          (window.pageYOffset >= 1065 && window.pageYOffset <= 1822) ||
+          (window.pageYOffset >= 2580 && window.pageYOffset <= 3996) ||
+          (window.pageYOffset >= 4217 && window.pageYOffset <= 13573)
+        ) {
+          element.classList.remove("is-black");
+        } else if (
+          (window.pageYOffset <= 1065 && window.pageYOffset >= 700) ||
+          (window.pageYOffset >= 1822 && window.pageYOffset <= 2580) ||
+          (window.pageYOffset >= 3996 && window.pageYOffset <= 4217) ||
+          window.pageYOffset >= 13573
+        ) {
+          element.classList.add("is-black");
+        }
+      });
+    </script>
   </body>
 </html>

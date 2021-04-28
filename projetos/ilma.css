@@ -230,9 +230,9 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  right: 3vw;
+  right: 3%;
   z-index: 13;
-  top: 50px;
+  top: 58px;
   animation: b 0.4s forwards;
 }
 @keyframes b {
