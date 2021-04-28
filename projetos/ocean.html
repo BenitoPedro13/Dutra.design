@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./tanoshime.css" />
-    <title>Dutra Design | Tanoshime</title>
+    <link rel="stylesheet" href="./ocean.css" />
+    <title>Dutra Design | Ocean</title>
   </head>
   <body>
     <div class="preloader">
@@ -51,11 +51,7 @@
         </a>
         <span
           class="menu-txt"
-          style="
-            color: rgb(255, 255, 255);
-            font-weight: 500;
-            mix-blend-mode: difference;
-          "
+          style="color: rgb(255, 255, 255); font-weight: 500"
           >menu</span
         >
       </header>
@@ -67,10 +63,7 @@
     </div>
 
     <div class="pjt-cont">
-      <img
-        style="width: 100vw"
-        src="../portifolio/ocean/parte 1.jpg"
-        alt="">
+      <img style="width: 100vw" src="../portifolio/ocean/parte 1.jpg" alt="" />
     </div>
 
     <div data-menu="container" class="menu-container">
@@ -169,5 +162,22 @@
 
     <script type="module" src="../js/anime-master/lib/anime.es.js"></script>
     <script type="module" src="../js/script-projetos.js"></script>
+    <script>
+      const element = document.querySelector(".menu-open");
+      window.addEventListener("scroll", () => {
+        if (
+          window.pageYOffset < 696 ||
+          (window.pageYOffset >= 2216 && window.pageYOffset <= 6010) ||
+          window.pageYOffset > 6770
+        ) {
+          element.classList.remove("is-black");
+        } else if (
+          (window.pageYOffset <= 2216 && window.pageYOffset >= 696) ||
+          (window.pageYOffset >= 6010 && window.pageYOffset <= 6770)
+        ) {
+          element.classList.add("is-black");
+        }
+      });
+    </script>
   </body>
 </html>
