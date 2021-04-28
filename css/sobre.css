@@ -219,8 +219,8 @@ header h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  left: 93.5%;
-  top: 50px;
+  right: 3%;
+  top: 58px;
   animation: b 0.4s forwards;
 }
 
