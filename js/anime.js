@@ -16,7 +16,7 @@ export default function initAnimar() {
         botaoAbrir.classList.add("ativo");
         anime({
           targets: '[data-menu="open"] .top',
-          width: "40px",
+          width: "2.5rem",
           background: "#000",
           rotate: "45deg",
           easing: "easeInOutSine",
@@ -24,8 +24,8 @@ export default function initAnimar() {
         });
         anime({
           targets: '[data-menu="open"] .bottom',
-          translateY: "-14px",
-          translateX: "8px",
+          translateY: "-1rem",
+          translateX: ".5rem",
           background: "#000",
           rotate: "-45deg",
           easing: "easeInOutSine",
@@ -41,7 +41,7 @@ export default function initAnimar() {
         botaoAbrir.classList.add("inactive");
         anime({
           targets: '[data-menu="open"] .top',
-          width: "20px",
+          width: "1.25rem",
           background: "#fff",
           rotate: "0deg",
           easing: "easeInOutSine",
@@ -101,12 +101,10 @@ export default function initAnimar() {
   const test = document.querySelector(".menu-nav");
 
   test.addEventListener("mouseover", function (event) {
-    // highlight the mouseover target
     event.target.classList.add("ativo");
   });
 
   test.addEventListener("mouseout", function (event) {
-    // highlight the mouseover target
     event.target.classList.remove("ativo");
   });
 
@@ -116,7 +114,7 @@ export default function initAnimar() {
       document.querySelector(".hero .bg").style.animation =
         "show 1.5s forwards";
       anime({
-        targets: ".hero .bg path",
+        targets: ".bg path",
         strokeDashoffset: [
           { value: 0 },
           { value: anime.setDashoffset, delay: 4000, duration: 4000 },
