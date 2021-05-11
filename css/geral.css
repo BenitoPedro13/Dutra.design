@@ -251,16 +251,16 @@ a {
 .top {
   display: block;
   background-color: rgba(255, 255, 255, 0.9);
-  width: 20px;
-  height: 7px;
-  margin-bottom: 7px;
-  margin-left: 20px;
+  width: 1.25rem;
+  height: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1.25rem;
 }
 .bottom {
   display: block;
   background-color: rgba(255, 255, 255, 0.9);
-  width: 40px;
-  height: 7px;
+  width: 2.5rem;
+  height: 0.5rem;
 }
 [data-menu="container"] {
   height: 100%;
@@ -271,6 +271,7 @@ a {
   z-index: 50;
   display: none;
   top: 0;
+  left: 0;
 }
 [data-menu="container"].ativo {
   display: flex;
@@ -355,7 +356,7 @@ a {
   display: inline-block;
   position: relative;
   font-size: 38px;
-  font-weight: 400;
+  font-weight: bold;
   letter-spacing: -0.05em;
   line-height: 47px;
   text-decoration: none;
@@ -579,13 +580,29 @@ a {
   font-weight: bold;
   font-style: italic;
 }
-.projeto-container[data-projeto="Tanoshime"] {
-  background-image: url("../images/forma-2.png");
-  background-repeat: no-repeat;
-  background-size: 35rem;
-  background-position-x: 87%;
-  background-position-y: center;
+
+.projeto-container[data-projeto="Tanoshime"] .bg {
+  width: 45rem;
+  position: absolute;
+  right: 1rem;
+  z-index: 0;
 }
+
+.projeto-container[data-projeto="Tanoshime"] .bg svg {
+  position: relative;
+  overflow: visible;
+  right: -0rem;
+  top: -0rem;
+}
+
+.projeto-container[data-projeto="Tanoshime"] .bg path {
+  position: relative;
+  right: -0rem;
+  top: -0rem;
+  fill: rgba(0, 0, 0, 0.175);
+}
+
+/*
 .projeto-container[data-projeto="Ilma"] {
   background-image: url("../images/forma-4.png");
   background-repeat: no-repeat;
@@ -593,20 +610,93 @@ a {
   background-position-x: 5%;
   background-position-y: center;
 }
-.projeto-container[data-projeto="Sus"] {
-  background-image: url("../images/forma-1.png");
-  background-repeat: no-repeat;
-  background-size: 40rem;
-  background-position-x: 95%;
-  background-position-y: center;
+
+.hero .bg {
+  width: 40rem;
+  display: none;
+  position: absolute;
+  right: 5vw;
+  z-index: 0;
 }
-.projeto-container[data-projeto="Pizza"] {
-  background-image: url("../images/forma-geometrica.png");
-  background-repeat: no-repeat;
-  background-size: 45rem;
-  background-position-x: 5%;
-  background-position-y: center;
+
+.hero .bg svg {
+  position: relative;
+  overflow: visible;
+  right: -0rem;
+  top: -0rem;
 }
+
+.hero .bg path {
+  position: relative;
+  right: -0rem;
+  top: -0rem;
+  fill: rgba(0, 0, 0, 0.175);
+}
+*/
+
+.projeto-container[data-projeto="Ilma"] .bg {
+  width: 45rem;
+  position: absolute;
+  left: 0;
+  z-index: 0;
+}
+
+.projeto-container[data-projeto="Ilma"] .bg svg {
+  position: relative;
+  overflow: visible;
+  right: -0rem;
+  top: -0rem;
+}
+
+.projeto-container[data-projeto="Ilma"] .bg path {
+  position: relative;
+  right: -0rem;
+  top: -0rem;
+  fill: rgba(0, 0, 0, 0.175);
+}
+
+.projeto-container[data-projeto="Sus"] .bg {
+  width: 45rem;
+  position: absolute;
+  right: 1rem;
+  z-index: 0;
+}
+
+.projeto-container[data-projeto="Sus"] .bg svg {
+  position: relative;
+  overflow: visible;
+  right: -0rem;
+  top: -0rem;
+}
+
+.projeto-container[data-projeto="Sus"] .bg path {
+  position: relative;
+  right: -0rem;
+  top: -0rem;
+  fill: rgba(0, 0, 0, 0.175);
+}
+
+.projeto-container[data-projeto="Pizza"] .bg {
+  width: 45rem;
+  position: absolute;
+  left: 0;
+  z-index: 0;
+}
+
+.projeto-container[data-projeto="Pizza"] .bg svg {
+  position: relative;
+  overflow: visible;
+  right: -0rem;
+  top: -0rem;
+}
+
+.projeto-container[data-projeto="Pizza"] .bg path {
+  position: relative;
+  right: -0rem;
+  top: -0rem;
+  fill: rgba(0, 0, 0, 0.175);
+}
+
 .projeto {
   display: flex;
   max-width: 80%;
@@ -621,17 +711,23 @@ a {
 .projeto-container[data-projeto="Pizza"] .projeto {
   flex-direction: row-reverse;
 }
+.projeto a {
+  z-index: 1;
+}
 .projeto-descricao h4 {
+  z-index: 1;
   margin-bottom: 2rem;
   font-weight: normal;
   font-size: 1.25rem;
 }
 .projeto-descricao h2 {
+  z-index: 1;
   margin-bottom: 2rem;
   font-size: 2rem;
   font-weight: normal;
 }
 .projeto-descricao p {
+  z-index: 1;
   font-size: 1.25rem;
   color: #777;
 }
