@@ -113,7 +113,7 @@ export default function initAnimar() {
       document.querySelector(".hero .bg").style.display = "block";
       document.querySelector(".hero .bg").style.animation =
         "show 1.5s forwards";
-      heroAnim = anime({
+      anime({
         targets: ".hero .bg path",
         strokeDashoffset: [
           { value: 0 },
