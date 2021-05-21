@@ -3,8 +3,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  scrollbar-color: white #e60c7d;
-  scrollbar-width: 8px;
 }
 .progress-bar {
   content: "";
@@ -60,31 +58,7 @@
   left: 0;
   z-index: 999;
 }
-*::-webkit-scrollbar {
-  width: 8px;
-  display: none;
-}
 
-*::-webkit-scrollbar-track {
-  background: #e60c7d;
-  display: none;
-  border: 2px solid white;
-  border-top: 30px;
-  border-left: 40px;
-  border-right: 40px;
-  border-bottom: 40px;
-}
-
-*::-webkit-scrollbar-track.ativo {
-  background: #e60c7d;
-}
-
-*::-webkit-scrollbar-thumb {
-  border-radius: 20px;
-  cursor: pointer;
-  height: 20vh;
-  background: transparent;
-}
 html {
   background: linear-gradient(
     to left,
@@ -97,7 +71,7 @@ html {
     #0f75bb,
     #035c98
   );
-  padding: 8px 8px 0 8px;
+  padding: 8px 8px 0 8px !important;
   background-repeat: no-repeat;
 }
 li {
@@ -108,6 +82,7 @@ body {
   color: rgb(255, 255, 255);
   font-family: Montserrat, Georgia, "Times New Roman", Times, serif;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 img {
   max-width: 100%;
