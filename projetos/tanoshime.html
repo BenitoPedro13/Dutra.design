@@ -51,11 +51,7 @@
         </a>
         <span
           class="menu-txt"
-          style="
-            color: rgb(255, 255, 255);
-            font-weight: 500;
-            mix-blend-mode: difference;
-          "
+          style="color: rgb(255, 255, 255); font-weight: 500"
           >menu</span
         >
       </header>
@@ -192,13 +188,19 @@
     <script type="module" src="../js/script-projetos.js"></script>
     <script>
       const element = document.querySelector(".menu-open");
+
+      const yChange = (y) =>
+        window.innerWidth * (y / 1366) * 1.02 - window.scrollY * 0.02;
+
       window.addEventListener("scroll", () => {
         if (
-          (window.pageYOffset <= 700 || window.pageYOffset >= 1465) === true
+          (window.pageYOffset <= yChange(695) ||
+            window.pageYOffset >= yChange(1465)) === true
         ) {
           element.classList.remove("is-black");
         } else if (
-          (window.pageYOffset <= 1465 || window.pageYOffset >= 700) === true
+          (window.pageYOffset <= yChange(1465) ||
+            window.pageYOffset >= yChange(695)) === true
         ) {
           element.classList.add("is-black");
         }

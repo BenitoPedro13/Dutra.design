@@ -167,13 +167,17 @@
     <script type="module" src="../js/script-projetos.js"></script>
     <script>
       const element = document.querySelector(".menu-open");
+      const yChange = (y) =>
+        window.innerWidth * (y / 1366) * 1.02 - window.scrollY * 0.02;
       window.addEventListener("scroll", () => {
         if (
-          (window.pageYOffset <= 684 || window.pageYOffset >= 2478) === true
+          (window.pageYOffset <= yChange(684) ||
+            window.pageYOffset >= yChange(2478)) === true
         ) {
           element.classList.remove("is-black");
         } else if (
-          (window.pageYOffset <= 2478 || window.pageYOffset >= 684) === true
+          (window.pageYOffset <= yChange(2478) ||
+            window.pageYOffset >= yChange(684)) === true
         ) {
           element.classList.add("is-black");
         }

@@ -167,19 +167,29 @@
     <script type="module" src="../js/script-projetos.js"></script>
     <script>
       const element = document.querySelector(".menu-open");
+
+      const yChange = (y) =>
+        window.innerWidth * (y / 1366) * 1.02 - window.scrollY * 0.02;
+
       window.addEventListener("scroll", () => {
         if (
-          window.pageYOffset <= 700 ||
-          (window.pageYOffset >= 1065 && window.pageYOffset <= 1822) ||
-          (window.pageYOffset >= 2580 && window.pageYOffset <= 3996) ||
-          (window.pageYOffset >= 4217 && window.pageYOffset <= 13573)
+          window.pageYOffset <= yChange(695) ||
+          (window.pageYOffset >= yChange(1065) &&
+            window.pageYOffset <= yChange(1822)) ||
+          (window.pageYOffset >= yChange(2580) &&
+            window.pageYOffset <= yChange(3996)) ||
+          (window.pageYOffset >= yChange(4217) &&
+            window.pageYOffset <= yChange(13573))
         ) {
           element.classList.remove("is-black");
         } else if (
-          (window.pageYOffset <= 1065 && window.pageYOffset >= 700) ||
-          (window.pageYOffset >= 1822 && window.pageYOffset <= 2580) ||
-          (window.pageYOffset >= 3996 && window.pageYOffset <= 4217) ||
-          window.pageYOffset >= 13573
+          (window.pageYOffset <= yChange(1065) &&
+            window.pageYOffset >= yChange(700)) ||
+          (window.pageYOffset >= yChange(1822) &&
+            window.pageYOffset <= yChange(2580)) ||
+          (window.pageYOffset >= yChange(3996) &&
+            window.pageYOffset <= yChange(4217)) ||
+          window.pageYOffset >= yChange(13573)
         ) {
           element.classList.add("is-black");
         }

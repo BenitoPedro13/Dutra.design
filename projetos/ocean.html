@@ -164,16 +164,21 @@
     <script type="module" src="../js/script-projetos.js"></script>
     <script>
       const element = document.querySelector(".menu-open");
+      const yChange = (y) =>
+        window.innerWidth * (y / 1366) * 1.02 - window.scrollY * 0.02;
       window.addEventListener("scroll", () => {
         if (
-          window.pageYOffset < 696 ||
-          (window.pageYOffset >= 2216 && window.pageYOffset <= 6010) ||
-          window.pageYOffset > 6770
+          window.pageYOffset < yChange(696) ||
+          (window.pageYOffset >= yChange(2216) &&
+            window.pageYOffset <= yChange(6010)) ||
+          window.pageYOffset > yChange(6770)
         ) {
           element.classList.remove("is-black");
         } else if (
-          (window.pageYOffset <= 2216 && window.pageYOffset >= 696) ||
-          (window.pageYOffset >= 6010 && window.pageYOffset <= 6770)
+          (window.pageYOffset <= yChange(2216) &&
+            window.pageYOffset >= yChange(696)) ||
+          (window.pageYOffset >= yChange(6010) &&
+            window.pageYOffset <= yChange(6770))
         ) {
           element.classList.add("is-black");
         }
