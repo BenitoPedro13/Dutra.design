@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/OverlayScrollbars.css">
   <link rel="stylesheet" href="./css/geral.css">
   <title>Dutra Design | Inicio</title>
 </head>
-<body>
+<body class="os-theme-light">
   <div class="preloader">
     <div class="progress-bar"></div>
     <h1>Loading....</h1>
@@ -19,9 +20,6 @@
           "fullload .5s forwards";
         setTimeout(() => {
           document.querySelector(".preloader").style.display = "none";
-          document
-            .querySelector("*::-webkit-scrollbar-track")
-            .classList.add("ativo");
         }, 500);
       }, 1500);
     });
@@ -60,13 +58,6 @@
           <h1 class="certo">certo.</h1>
         </div>
         
-      <ul class="custom-controls">
-          <li><img src="./img/foto1-thumb.jpg" alt=""></li>
-          <li><img src="./img/foto2-thumb.jpg" alt=""></li>
-          <li><img src="./img/foto3-thumb.jpg" alt=""></li>
-          <li><img src="./img/foto4-thumb.jpg" alt=""></li>
-
-      </ul>
         <div class="img-container">
           <div class="wrapper">
             <ul class="slide">
@@ -1788,6 +1779,16 @@
         </div>
       </div>
     </footer>
+    <script type="module" src="./js/OverlayScrollbars.js">
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+	//The first argument are the elements to which the plugin shall be initialized
+	//The second argument has to be at least a empty object or a object with your desired options
+	OverlayScrollbars(document.querySelectorAll("body"), { className: "os-theme-light"});
+});
+
+    </script>
     <script type="module" src="./js/anime-master/lib/anime.es.js"></script>
     <script type="module" src="./js/script.js"></script>
 </body>

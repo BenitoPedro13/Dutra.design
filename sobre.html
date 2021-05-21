@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/OverlayScrollbars.css" />
     <link rel="stylesheet" href="./css/sobre.css" />
     <title>Dutra Design | Sobre</title>
   </head>
@@ -172,6 +173,16 @@
         </div>
       </div>
     </footer>
+    <script type="module" src="./js/OverlayScrollbars.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        //The first argument are the elements to which the plugin shall be initialized
+        //The second argument has to be at least a empty object or a object with your desired options
+        OverlayScrollbars(document.querySelectorAll("body"), {
+          className: "os-theme-light",
+        });
+      });
+    </script>
     <script type="module" src="./js/anime-master/lib/anime.es.js"></script>
     <script type="module" src="./js/script.js"></script>
   </body>
