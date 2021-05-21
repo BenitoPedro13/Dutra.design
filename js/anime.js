@@ -113,11 +113,11 @@ export default function initAnimar() {
       document.querySelector(".hero .bg").style.display = "block";
       document.querySelector(".hero .bg").style.animation =
         "show 1.5s forwards";
-      anime({
-        targets: ".bg path",
+      heroAnim = anime({
+        targets: ".hero .bg path",
         strokeDashoffset: [
           { value: 0 },
-          { value: anime.setDashoffset, delay: 4000, duration: 4000 },
+          { value: anime.setDashoffset, delay: 2000, duration: 4000 },
         ],
         scale: 1.01,
         rotate: [0, 1.5],
@@ -127,6 +127,20 @@ export default function initAnimar() {
           return i * 250;
         },
         loop: true,
+      });
+      const data = ["Tanoshime", "Ilma", "Sus", "Pizza"];
+      data.forEach((r) => {
+        anime({
+          targets: `[data-projeto=${r}] .bg path`,
+          scale: 1.01,
+          rotate: [0, 1.5],
+          direction: "alternate",
+          easing: "easeInOutSine",
+          delay: function (el, i) {
+            return i * 250;
+          },
+          loop: true,
+        });
       });
     }, 2000);
   }
