@@ -106,7 +106,7 @@ a {
 }
 .brand {
   display: flex;
-  width: 160px;
+  width: 10rem;
   justify-content: space-between;
   position: relative;
   right: calc(5vw + 27px);
@@ -134,25 +134,25 @@ a {
 }
 .mid {
   display: block;
-  width: 9px;
-  height: 66px;
+  width: 0.5rem;
+  height: 4rem;
   background-color: white;
-  margin: 0 15px;
+  margin: 0 1rem;
   left: 50%;
 }
 .left {
   display: block;
-  width: 9px;
-  height: 25px;
+  width: 0.5rem;
+  height: 1.5rem;
   background-color: white;
-  margin-top: 12px;
+  margin-top: 0.75rem;
 }
 .right {
   display: block;
-  width: 9px;
-  height: 25px;
+  width: 0.5rem;
+  height: 1.5rem;
   background-color: white;
-  margin-top: 12px;
+  margin-top: 0.75rem;
 }
 
 @keyframes mid {
@@ -161,24 +161,24 @@ a {
     margin: 0;
   }
   to {
-    height: 66px;
+    height: 4rem;
     margin: 0;
   }
 }
 @keyframes left {
   from {
-    transform: translate3d(9px, 0, 0);
+    transform: translate3d(0.5rem, 0, 0);
   }
   to {
-    transform: translate3d(-15px, 0, 0);
+    transform: translate3d(-1rem, 0, 0);
   }
 }
 @keyframes right {
   from {
-    transform: translate3d(-9px, 0, 0);
+    transform: translate3d(-0.5rem, 0, 0);
   }
   to {
-    transform: translate3d(15px, 0, 0);
+    transform: translate3d(1rem, 0, 0);
   }
 }
 
@@ -432,10 +432,10 @@ a {
 }
 .hero {
   max-width: 80%;
-  margin: 0 auto;
+  margin: 2rem auto;
   display: flex;
   align-items: center;
-  height: 584px;
+  height: 40rem;
 }
 .hero .title {
   font-size: 3rem;
@@ -453,7 +453,7 @@ a {
   background: transparent;
   z-index: 1;
   position: absolute;
-  right: 10%;
+  right: calc(5vw + 4.8rem);
   overflow: hidden;
   border-radius: 13px;
   box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.4);
@@ -549,7 +549,7 @@ a {
   font-weight: lighter;
   position: relative;
   z-index: 1;
-  margin: 138px 0 200px 0;
+  margin: 3rem 0 2rem 0;
 }
 .projetos-titulo span {
   font-weight: bold;
@@ -559,7 +559,7 @@ a {
 .projeto-container[data-projeto="Tanoshime"] .bg {
   width: 45rem;
   position: absolute;
-  right: 1rem;
+  right: calc(10vw - 8.5rem);
   z-index: 0;
 }
 
@@ -577,42 +577,10 @@ a {
   fill: rgba(0, 0, 0, 0.175);
 }
 
-/*
-.projeto-container[data-projeto="Ilma"] {
-  background-image: url("../images/forma-4.png");
-  background-repeat: no-repeat;
-  background-size: 40rem;
-  background-position-x: 5%;
-  background-position-y: center;
-}
-
-.hero .bg {
-  width: 40rem;
-  display: none;
-  position: absolute;
-  right: 5vw;
-  z-index: 0;
-}
-
-.hero .bg svg {
-  position: relative;
-  overflow: visible;
-  right: -0rem;
-  top: -0rem;
-}
-
-.hero .bg path {
-  position: relative;
-  right: -0rem;
-  top: -0rem;
-  fill: rgba(0, 0, 0, 0.175);
-}
-*/
-
 .projeto-container[data-projeto="Ilma"] .bg {
   width: 45rem;
   position: absolute;
-  left: 0;
+  left: calc(10vw - 8.5rem) !important;
   z-index: 0;
 }
 
@@ -633,7 +601,7 @@ a {
 .projeto-container[data-projeto="Sus"] .bg {
   width: 45rem;
   position: absolute;
-  right: 1rem;
+  right: calc(10vw - 8.5rem);
   z-index: 0;
 }
 
@@ -654,7 +622,7 @@ a {
 .projeto-container[data-projeto="Pizza"] .bg {
   width: 45rem;
   position: absolute;
-  left: 0;
+  left: calc(10vw - 8.5rem);
   z-index: 0;
 }
 
@@ -678,7 +646,7 @@ a {
   margin: 0 auto;
   align-items: center;
   justify-content: space-between;
-  height: 892px;
+  height: 1000px;
 }
 .projeto-container[data-projeto="Ilma"] .projeto {
   flex-direction: row-reverse;
@@ -687,6 +655,9 @@ a {
   flex-direction: row-reverse;
 }
 .projeto a {
+  z-index: 1;
+}
+.projeto-descricao {
   z-index: 1;
 }
 .projeto-descricao h4 {
@@ -706,6 +677,7 @@ a {
   font-size: 1.25rem;
   color: #777;
 }
+
 .projeto .img-container {
   width: 28rem;
   height: 40rem;
@@ -719,70 +691,70 @@ a {
 }
 .divisor {
   position: absolute;
-  left: 50%;
+  left: calc(50vw - 2rem);
 }
 .divisor .top-0 {
   display: block;
-  width: 25px;
-  height: 9px;
+  width: 1.5rem;
+  height: 0.5rem;
   background-color: white;
-  margin-left: 41px;
+  margin-left: 2.5rem;
 }
 .divisor .mid-0 {
   display: block;
-  width: 66px;
-  height: 9px;
+  width: 4rem;
+  height: 0.5rem;
   background-color: white;
-  margin: 9px 0;
+  margin: 0.5rem 0;
 }
 .divisor .bot-0 {
   display: block;
-  width: 25px;
-  height: 9px;
+  width: 1.5rem;
+  height: 0.5rem;
   background-color: white;
-  margin-right: 41px;
+  margin-right: 2.5rem;
 }
 .divisor .top-1 {
   display: block;
-  width: 25px;
-  height: 9px;
+  width: 1.5rem;
+  height: 0.5rem;
   background-color: white;
-  margin-left: 20px;
+  margin-left: 1.25rem;
 }
 .divisor .mid-0 {
   display: block;
-  width: 66px;
-  height: 9px;
+  width: 4rem;
+  height: 0.5rem;
   background-color: white;
-  margin: 9px 0;
+  margin: 0.5rem 0;
 }
 .divisor .bot-1 {
   display: block;
-  width: 25px;
-  height: 9px;
+  width: 1.5rem;
+  height: 0.5rem;
   background-color: white;
-  margin-left: 20px;
+  margin-left: 1.25rem;
 }
 .divisor .top-2 {
   display: block;
-  width: 25px;
-  height: 9px;
+  width: 1.5rem;
+  height: 0.5rem;
   background-color: white;
-  margin-right: 41px;
+  margin-right: 2.5rem;
 }
 .divisor .mid-0 {
   display: block;
-  width: 66px;
-  height: 9px;
+  width: 4rem;
+  height: 0.5rem;
   background-color: white;
-  margin: 9px 0;
+  margin: 0.5rem 0;
 }
 .divisor .bot-2 {
   display: block;
-  width: 25px;
-  height: 9px;
+  width: 1.5rem;
+  height: 0.5rem;
   background-color: white;
-  margin-left: 41px;
+  margin-left: 2.5rem;
 }
 .how {
   max-width: 80%;
@@ -1024,3 +996,182 @@ footer .ctt-social a {
     line-height: 52px;
   }
 }
+
+@media (max-width: 736px) {
+  .menu-txt {
+    display: none;
+  }
+  .brand {
+    right: 5vw;
+  }
+  .menu-open {
+    right: 5vw;
+  }
+}
+
+@media (max-width: 492px) {
+  html {
+    font-size: 12px;
+  }
+  footer .text-logo .logo-footer {
+    display: none;
+  }
+  footer .inside-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .ctt-social {
+    display: none;
+  }
+  .ctt {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1360px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1180px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .hero .title {
+    font-size: 2.5rem;
+  }
+  .hero {
+    height: 32rem;
+  }
+  .hero .bg {
+    width: 32rem;
+  }
+  .hero .img-container {
+    width: 22.4rem;
+    height: 14.4rem;
+  }
+  .hero .img-container img {
+    height: 14.4rem;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 873px) {
+  .hero .title {
+    top: 140px;
+    left: calc(50vw - 14.8rem);
+  }
+  .hero .img-container {
+    top: 390px;
+    right: calc(50vw - 12rem);
+  }
+  .hero .bg {
+    top: 250px;
+    right: calc(50vw - 16rem);
+  }
+  .hero {
+    height: 40rem;
+  }
+  .projeto {
+    flex-direction: column !important;
+    justify-content: space-evenly;
+  }
+  .projeto-container[data-projeto="Pizza"] .bg {
+    left: calc(50vw - 24rem);
+    top: 4180px;
+  }
+  .projeto-container[data-projeto="Sus"] .bg {
+    left: calc(50vw - 24rem);
+    top: 3180px;
+  }
+  .projeto-container[data-projeto="Ilma"] .bg {
+    left: calc(50vw - 24rem) !important;
+    top: 2170px;
+  }
+  .projeto-container[data-projeto="Tanoshime"] .bg {
+    left: calc(50vw - 24rem);
+    top: 1170px;
+  }
+  .projetos-titulo h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 573px) {
+  .projetos-titulo h1 {
+    font-size: 3.5rem;
+  }
+  .projeto-container[data-projeto="Pizza"] .bg {
+    width: 40rem;
+    left: calc(50vw - 22rem);
+    top: 4210px;
+  }
+  .projeto-container[data-projeto="Sus"] .bg {
+    width: 40rem;
+    left: calc(50vw - 20rem);
+    top: 3210px;
+  }
+  .projeto-container[data-projeto="Ilma"] .bg {
+    width: 40rem;
+    left: calc(50vw - 20rem) !important;
+    top: 2200px;
+  }
+  .projeto-container[data-projeto="Tanoshime"] .bg {
+    width: 40rem;
+    left: calc(50vw - 21rem);
+    top: 1200px;
+  }
+}
+
+@media (max-width: 430px) {
+  html {
+    font-size: 10px;
+  }
+  .hero .title {
+    font-size: 2rem;
+    left: calc(50vw - 11.8rem);
+  }
+  .hero .img-container {
+    top: 345px;
+  }
+  .hero .bg {
+    top: 230px;
+  }
+  .projetos-titulo h1 {
+    font-size: 3rem;
+  }
+  .projeto-descricao h2 {
+    font-size: 1.5rem;
+  }
+  .projeto {
+    height: 800px;
+  }
+  .projeto .img-container img {
+    height: 37rem;
+  }
+  .projeto-container[data-projeto="Pizza"] .bg {
+    width: 40rem;
+    left: calc(50vw - 22rem);
+    top: 3365px;
+  }
+  .projeto-container[data-projeto="Sus"] .bg {
+    width: 40rem;
+    left: calc(50vw - 20rem);
+    top: 2580px;
+  }
+  .projeto-container[data-projeto="Ilma"] .bg {
+    width: 40rem;
+    left: calc(50vw - 20rem) !important;
+    top: 1770px;
+  }
+  .projeto-container[data-projeto="Tanoshime"] .bg {
+    width: 40rem;
+    left: calc(50vw - 21rem);
+    top: 970px;
+  }
+} ;
