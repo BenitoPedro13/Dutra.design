@@ -487,7 +487,7 @@ form {
   font-family: Montserrat, Georgia, "Times New Roman", Times, serif;
   margin-bottom: 2rem;
   line-height: 3rem;
-  text-align: center;
+  text-align: left;
 }
 form button {
   width: fit-content;
