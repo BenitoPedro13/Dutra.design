@@ -50,7 +50,7 @@
 .preloader {
   width: 100vw;
   height: 100vh;
-  background: rgb(37, 36, 36);
+  background: rgb(22, 22, 22);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -137,6 +137,8 @@ a {
   display: flex;
   justify-content: center;
   width: 57px;
+}
+.brand a {
   position: relative;
   right: calc(5vw + 27px);
 }
@@ -667,7 +669,7 @@ footer .ctt-social a {
   .menu-txt {
     display: none;
   }
-  .logo {
+  .brand a {
     right: 5vw;
   }
   .menu-open {
