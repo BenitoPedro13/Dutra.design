@@ -130,19 +130,22 @@ header {
 header h1 {
   font-weight: 500;
   font-size: 2.5rem;
+  position: absolute;
+  right: calc(50% - 6.625rem);
 }
 a {
   text-decoration: none;
 }
 .brand {
   display: flex;
-  width: fit-content;
   justify-content: space-between;
 }
 .logo {
   display: flex;
   justify-content: center;
   width: 57px;
+}
+.brand a {
   position: relative;
   right: calc(5vw + 27px);
 }
@@ -164,25 +167,25 @@ a {
 }
 .mid {
   display: block;
-  width: 9px;
-  height: 66px;
+  width: .5rem;
+  height: 4rem;
   background-color: white;
-  margin: 0 15px;
+  margin: 0 1rem;
   left: 50%;
 }
 .left {
   display: block;
-  width: 9px;
-  height: 25px;
+  width: .5rem;
+  height: 1.5rem;
   background-color: white;
-  margin-top: 12px;
+  margin-top: .75rem;
 }
 .right {
   display: block;
-  width: 9px;
-  height: 25px;
+  width: .5rem;
+  height: 1.5rem;
   background-color: white;
-  margin-top: 12px;
+  margin-top: .75rem;
 }
 
 @keyframes mid {
@@ -191,24 +194,24 @@ a {
     margin: 0;
   }
   to {
-    height: 66px;
+    height: 4rem;
     margin: 0;
   }
 }
 @keyframes left {
   from {
-    transform: translate3d(9px, 0, 0);
+    transform: translate3d(.5rem, 0, 0);
   }
   to {
-    transform: translate3d(-15px, 0, 0);
+    transform: translate3d(-1rem, 0, 0);
   }
 }
 @keyframes right {
   from {
-    transform: translate3d(-9px, 0, 0);
+    transform: translate3d(-.5rem, 0, 0);
   }
   to {
-    transform: translate3d(15px, 0, 0);
+    transform: translate3d(1rem, 0, 0);
   }
 }
 .text {
@@ -500,18 +503,23 @@ a {
 }
 
 [data-section] {
-  display: none;
+  position: absolute;
+  visibility: hidden;
+  z-index: -999999;
+  top: -999999px;
+  left: -999999px;
 }
 
 [data-section].ativo {
   display: flex;
+  visibility: visible;
+  z-index: 0;
+  position: initial;
 }
 
 [data-section="1"] {
   width: 80%;
-  margin: 0 auto 20px auto;
-  height: 2061px;
-  display: none;
+  margin: 2rem auto;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
@@ -519,9 +527,8 @@ a {
 
 [data-section="0"] {
   width: 80%;
-  margin: 0 auto;
-  height: 1924px;
-  display: none;
+  margin: 2rem auto;
+
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
@@ -530,24 +537,15 @@ a {
 [data-section="2"] {
   width: 80%;
   margin: 0 auto;
-  height: 756px;
-  display: none;
+  height: 50rem;
+
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
 }
 
-.bg {
-  position: absolute;
-  z-index: 0;
-  top: 687px;
-  left: 2.5%;
-  right: 2.5%;
-}
-
 .projeto-container {
-  margin: 0 auto;
-  z-index: 13;
+  margin: 2rem auto;
 }
 
 .projeto {
@@ -557,6 +555,10 @@ a {
   max-width: 40%;
   align-items: center;
   justify-content: space-around;
+  position: relative;
+}
+.projeto-descricao {
+  height: 96px;
 }
 .projeto-descricao h3 {
   margin-top: 2rem;
@@ -567,9 +569,137 @@ a {
   line-height: 2rem;
   color: #fff;
 }
+
 [data-projeto="Sus"] h3 {
   margin: 2rem 0;
 }
+.projeto-container[data-projeto="Sus"] .bg {
+  width: 45rem;
+  top: 100px;
+  position: absolute;
+  z-index: -1;
+}
+
+.projeto-container[data-projeto="Sus"] .bg svg {
+  position: relative;
+  overflow: visible;
+  right: -0rem;
+  top: -0rem;
+}
+
+.projeto-container[data-projeto="Sus"] .bg path {
+  position: relative;
+  right: -0rem;
+  top: -0rem;
+  fill: rgba(0, 0, 0, 0.175);
+}
+
+
+.projeto-container[data-projeto="Ilma"] .bg {
+  width: 45rem;
+  position: absolute;
+  top: 100px;
+  z-index: -1;
+}
+
+.projeto-container[data-projeto="Ilma"] .bg svg {
+  position: relative;
+  overflow: visible;
+  right: -0rem;
+  top: -0rem;
+}
+
+.projeto-container[data-projeto="Ilma"] .bg path {
+  position: relative;
+  right: -0rem;
+  top: -0rem;
+  fill: rgba(0, 0, 0, 0.175);
+}
+
+.projeto-container[data-projeto="Tanoshime"] .bg {
+  width: 45rem;
+  position: absolute;
+  top: 100px;
+  z-index: -1;
+}
+
+.projeto-container[data-projeto="Tanoshime"] .bg svg {
+  position: relative;
+  overflow: visible;
+  right: -0rem;
+  top: -0rem;
+}
+
+.projeto-container[data-projeto="Tanoshime"] .bg path {
+  position: relative;
+  right: -0rem;
+  top: -0rem;
+  fill: rgba(0, 0, 0, 0.175);
+}
+
+.projeto-container[data-projeto="saphira"] .bg {
+  width: 45rem;
+  position: absolute;
+  top: 100px;
+  z-index: -1;
+}
+
+.projeto-container[data-projeto="saphira"] .bg svg {
+  position: relative;
+  overflow: visible;
+  right: -0rem;
+  top: -0rem;
+}
+
+.projeto-container[data-projeto="saphira"] .bg path {
+  position: relative;
+  right: -0rem;
+  top: -0rem;
+  fill: rgba(0, 0, 0, 0.175);
+}
+
+.projeto-container[data-projeto="ocean"] .bg {
+  width: 45rem;
+  top: 100px;
+  position: absolute;
+  z-index: -1;
+}
+
+.projeto-container[data-projeto="ocean"] .bg svg {
+  position: relative;
+  overflow: visible;
+  right: -0rem;
+  top: -0rem;
+}
+
+.projeto-container[data-projeto="ocean"] .bg path {
+  position: relative;
+  right: -0rem;
+  top: -0rem;
+  fill: rgba(0, 0, 0, 0.175);
+}
+
+.projeto-container[data-projeto="tango"] .bg {
+  width: 45rem;
+  position: absolute;
+  top: 100px;
+  z-index: -1;
+}
+
+.projeto-container[data-projeto="tango"] .bg svg {
+  position: relative;
+  overflow: visible;
+  right: -0rem;
+  top: -0rem;
+}
+
+.projeto-container[data-projeto="tango"] .bg path {
+  position: relative;
+  right: -0rem;
+  top: -0rem;
+  fill: rgba(0, 0, 0, 0.175);
+}
+
 .projeto .img-container {
   width: 28rem;
   height: 40rem;
@@ -577,9 +707,6 @@ a {
   padding: 10px;
   border: 5px solid #e60c7c;
   box-shadow: 2px 3px 10px rgba(0, 0, 255, 0.527);
-}
-.projeto .img-container.bottom {
-  width: 612px;
 }
 .projeto .img-container img {
   height: 38rem;
@@ -603,8 +730,10 @@ a {
 }
 
 .slide-img-container {
-  width: 816px;
-  height: 500px;
+  width: 60.4vw;
+  height: 37vw;
+  min-width: 280px;
+  min-height: 155.5px;
   background: transparent;
   margin: 0 auto;
   z-index: 1;
@@ -615,8 +744,10 @@ a {
 }
 
 .slide-img-container img {
-  height: 500px;
-  width: 816px;
+  height: 37vw;
+  min-height: 155.5px;
+  min-width: 280px;
+  width: 60.4vw;
   z-index: 2;
 }
 
@@ -833,3 +964,97 @@ footer .ctt-social a {
     line-height: 52px;
   }
 }
+
+@media (max-width: 736px) {
+  .menu-txt {
+    display: none;
+  }
+  .brand a{
+    right: 5vw;
+  }
+  .menu-open {
+    right: 5vw;
+  }
+}
+
+@media (max-width: 492px) {
+  html {
+    font-size: 12px;
+  }
+  footer .text-logo .logo-footer {
+    display: none;
+  }
+  footer .inside-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .ctt-social {
+    display: none;
+  }
+  .ctt {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1360px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1180px) {
+  html {
+    font-size: 12px;
+  }
+  .projeto .bg {
+    top: 150px !important;
+  }
+}
+
+@media (max-width: 573px) {
+  .projeto-container[data-projeto="Pizza"] .bg {
+    width: 40rem;
+  }
+  .projeto-container[data-projeto="Sus"] .bg {
+    width: 40rem;
+  }
+  .projeto-container[data-projeto="Ilma"] .bg {
+    width: 40rem;
+  }
+  .projeto-container[data-projeto="Tanoshime"] .bg {
+    width: 40rem;
+  }
+  [data-section]{
+    width: 100vw;
+  }
+}
+
+@media (max-width: 430px) {
+  html {
+    font-size: 10px;
+  }
+  .nav-menu li h1 {
+    font-size: 1.75rem;
+  }
+  .projeto .bg {
+    top: 165px !important;
+  }
+  .projeto .img-container img {
+    height: 37rem;
+}
+}
+
+@media (max-width: 370px){
+  .nav-menu li h1{
+    font-size: 1.625rem;
+  }
+}
+
+@media (max-width: 512px){
+  .projeto-container{
+    position: relative;
+  }
+}
+
+
