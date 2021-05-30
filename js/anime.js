@@ -128,7 +128,7 @@ export default function initAnimar() {
         },
         loop: true,
       });
-      const data = ["Tanoshime", "Ilma", "Sus", "Pizza"];
+      const data = ["Tanoshime", "Ilma", "Sus", "Pizza","tango","ocean","saphira"];
       data.forEach((r) => {
         anime({
           targets: `[data-projeto=${r}] .bg path`,

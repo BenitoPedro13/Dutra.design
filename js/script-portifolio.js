@@ -3,7 +3,6 @@ import SlideNav from "./slide.js";
 
 const slide = new SlideNav(".slide-1", ".wrapper-1");
 slide.init();
-slide.addControl(".custom-controls-1");
 
 const sections = document.querySelectorAll("[data-section]");
 const selections = document.querySelectorAll("[data-select]");
