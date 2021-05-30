@@ -114,7 +114,7 @@ a {
 .logo {
   display: flex;
   justify-content: center;
-  width: 57px;
+  width: 3.5rem;
 }
 .brand .logo > * {
   display: none;
@@ -412,6 +412,7 @@ a {
   grid-column: 2 / 3;
   margin-left: 0px;
   width: 15rem;
+  min-width: 200px;
   background: #0eff00;
   height: 50px;
   border-radius: 50px;
@@ -870,6 +871,11 @@ footer .ctt {
   justify-content: space-between;
   align-items: center;
 }
+footer .ctt-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 footer .ctt-text h3 {
   font-size: 1.5rem;
   font-weight: 500;
@@ -1004,7 +1010,7 @@ footer .ctt-social a {
     display: none;
   }
   .brand {
-    right: 5vw;
+    right: calc(5vw + 8px);
   }
   .menu-open {
     right: 5vw;
@@ -1022,6 +1028,9 @@ footer .ctt-social a {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  footer .inside-container > h1{
+    min-width: 280px;
   }
   footer .ctt-social {
     display: none;
@@ -1121,6 +1130,7 @@ footer .ctt-social a {
   .hero .title {
     font-size: 2rem;
     left: calc(50vw - 11.8rem);
+    top: 160px;
   }
   .hero .img-container {
     top: 345px;
@@ -1144,18 +1154,22 @@ footer .ctt-social a {
     width: 40rem;
     left: calc(50vw - 22rem) !important;
     overflow-x: hidden;
+    top: 260px;
   }
   .projeto-container[data-projeto="Sus"] .bg {
     width: 40rem;
     left: calc(50vw - 20rem) !important;
+    top: 280px
   }
   .projeto-container[data-projeto="Ilma"] .bg {
     width: 40rem;
     left: calc(50vw - 20rem) !important;
+    top: 260px;
   }
   .projeto-container[data-projeto="Tanoshime"] .bg {
     width: 40rem;
     left: calc(50vw - 21rem) !important;
+    top: 260px;
   }
 } ;
 
