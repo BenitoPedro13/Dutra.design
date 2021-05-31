@@ -52,6 +52,7 @@
   height: 100vh;
   background: rgb(233, 233, 233);
   display: flex;
+  text-align: center;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -442,6 +443,7 @@ a {
   width: 15rem;
   background: #0eff00;
   height: 50px;
+  min-width: 200px;
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -525,6 +527,7 @@ a {
   width: 80%;
   margin: 0 auto;
   height: 50vw;
+  min-height: 250px;
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
@@ -787,10 +790,7 @@ hr {
 
 footer {
   background-color: white;
-  position: absolute;
-  height: 412px;
   width: 100%;
-  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -956,13 +956,13 @@ footer .ctt-social a {
     display: none;
   }
   .brand a{
-    right: calc(5vw + 8px);
+    right: calc(5vw + 6px);
   }
   .nav-menu li {
     width: 150px;
   }
   header h1{
-    left: calc(5vw - 12px);
+    left: calc(5vw - 10px);
     top: 110px;
   }
   .menu-open {
@@ -981,6 +981,18 @@ footer .ctt-social a {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  footer .inside-container > * {
+    margin: 1.5rem 0;
+  }
+  footer .text-logo h1{
+    font-size: 3rem;
+  }
+  footer .ctt-text h3{
+    font-size: 1.8rem;
+  }
+  footer{
+    font-size: 1.2rem;
   }
   footer .ctt-social {
     display: none;
