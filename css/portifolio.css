@@ -526,8 +526,8 @@ a {
 [data-section="2"] {
   width: 80%;
   margin: 0 auto;
+  min-height: 350px;
   height: 50vw;
-  min-height: 250px;
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
