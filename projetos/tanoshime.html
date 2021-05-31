@@ -10,7 +10,7 @@
   <body>
     <div class="preloader">
       <div class="progress-bar"></div>
-      <h1>Pode ser <em>imaginado,</em> pode ser <em>criado.</h1>
+      <h1>Pode ser <em>imaginado,</em> pode ser <em>criado.</em></h1>
     </div>
     <script>
       window.addEventListener("load", () => {
@@ -28,8 +28,8 @@
     </script>
     <div class="header-grid">
       <header>
-        <a href="../index.html">
-          <div class="brand">
+        <div class="brand">
+          <a href="../index.html">
             <div class="logo">
               <span
                 data-anime="logo-side"
@@ -47,8 +47,9 @@
                 style="background-color: rgb(255, 255, 255)"
               ></span>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
+        
         <span
           class="menu-txt"
           style="color: rgb(255, 255, 255); font-weight: 500"
@@ -189,8 +190,22 @@
     <script>
       const element = document.querySelector(".menu-open");
 
-      const yChange = (y) =>
-        window.innerWidth * (y / 1366) * 1.02 - window.scrollY * 0.02;
+      const yChange = y =>{
+
+if(window.innerWidth <= 430){
+  return ((window.innerWidth * (y / 1366) * 1.02 - window.scrollY * 0.02) - 38)
+}
+else if(window.innerWidth <= 1180){
+  return ((window.innerWidth * (y / 1366) * 1.02 - window.scrollY * 0.02) - 44);
+}
+else if(window.innerWidth <= 1360){
+  return ((window.innerWidth * (y / 1366) * 1.02 - window.scrollY * 0.02) - 50);
+}
+else {
+  return ((window.innerWidth * (y / 1366) * 1.02 - window.scrollY * 0.02));
+}
+
+}
 
       window.addEventListener("scroll", () => {
         if (

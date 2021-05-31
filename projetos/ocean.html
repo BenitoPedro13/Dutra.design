@@ -164,8 +164,24 @@
     <script type="module" src="../js/script-projetos.js"></script>
     <script>
       const element = document.querySelector(".menu-open");
-      const yChange = (y) =>
-        window.innerWidth * (y / 1366) * 1.02 - window.scrollY * 0.02;
+      
+      const yChange = y =>{
+
+if(window.innerWidth <= 430){
+  return ((window.innerWidth * (y / 1366) * 1.02 - window.scrollY * 0.02) - 38)
+}
+else if(window.innerWidth <= 1180){
+  return ((window.innerWidth * (y / 1366) * 1.02 - window.scrollY * 0.02) - 44);
+}
+else if(window.innerWidth <= 1360){
+  return ((window.innerWidth * (y / 1366) * 1.02 - window.scrollY * 0.02) - 50);
+}
+else {
+  return ((window.innerWidth * (y / 1366) * 1.02 - window.scrollY * 0.02));
+}
+
+}
+
       window.addEventListener("scroll", () => {
         if (
           window.pageYOffset < yChange(696) ||
